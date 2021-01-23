@@ -1,44 +1,38 @@
 <template>
   <div>
-    {{newData}}
-  
-    <h2>Heating</h2>
-    <br>
-    <home-section-question 
-    v-bind:newData="newData" 
-    v-bind:newData2="newData2"
-    ></home-section-question>
-    <home-section-question-2></home-section-question-2>
+    <question-heating></question-heating>
+    <question-electricity> </question-electricity>
+    <question-water></question-water>
+    <question-waste></question-waste>
   
 
-    
-        <!-- <p>Is heating oil, coal, wood or bottled gas used in your household?</p>
-            <input type="radio" id="home-section" name="yes" value="yes">
-            <label for="yes">Yes</label><br>
-            <input type="radio" id="home-section" name="no" value="no">
-            <label for="no">No</label><br> -->
+            
   </div>
 </template>
 
 <script>
-import HomeSectionQuestion from './HomeSectionQuestion.vue'
-import HomeSectionQuestion2 from './HomeSectionQuestion2.vue'
+import QuestionHeating from './QuestionHeating.vue'
+import QuestionElectricity from './QuestionElectricity.vue'
+import QuestionWater from './QuestionWater.vue'
+import QuestionWaste from './QuestionWaste.vue'
 
 export default {
-name: "HomeSection",
+name: "home-section",
 data(){
     return{
-        newData: "a String Again Changed",
-        newData2: "second string",
-        questions: [],
-        totalOfSection: [], 
+        totalHomeSection: 0,
+     
     }
 },
 props:[''],
 components: {
-    "home-section-question": HomeSectionQuestion,
-    "home-section-question-2": HomeSectionQuestion2
-}
+    "question-heating": QuestionHeating,
+    "question-electricity": QuestionElectricity,
+    "question-water": QuestionWater,
+    "question-waste": QuestionWaste,
+    
+},
+
 }
 </script>
 
