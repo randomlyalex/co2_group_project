@@ -32,6 +32,11 @@ components: {
     "question-waste": QuestionWaste,
     
 },
+methods: {
+    getTotalOfHome(){
+        return this.totalHomeSection = homeQuestionTotals.reduce((a, b) => a + b, 0)
+    }
+}
 
 }
 </script>
