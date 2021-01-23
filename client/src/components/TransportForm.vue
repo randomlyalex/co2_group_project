@@ -26,6 +26,7 @@ export default {
     },
     created() {
         this.carCo2Emission();
+        this.busCo2Emission();
         this.transportTotal = this.transportValues.reduce(
             (acc, item) => acc + item,
             0
@@ -35,6 +36,9 @@ export default {
     methods: {
       carCo2Emission() {
         this.transportValues.push(this.carCo2PerKm * 100)
+      },
+      busCo2Emission() {
+        this.transportValues.push(this.busCo2PerKm * 100)
       },
     }
 };
