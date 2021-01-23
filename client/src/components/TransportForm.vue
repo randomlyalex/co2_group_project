@@ -10,6 +10,7 @@
             <input type="radio" name="miles" value="150" />150+
             <input type="radio" name="miles" value="200" />200+
         </form>
+        <span> Your total co2 emissions from travelling: {{transportTotal}} </span>
     </div>
 </template>
 
