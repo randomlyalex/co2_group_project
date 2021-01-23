@@ -1,11 +1,17 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <home-section></home-section>
+    </div>
+
 </template>
 
 <script>
+import HomeSection from './components/HomeSection.vue';
 export default {
     name: "App",
-    components: {},
+    components: {
+        "home-section": HomeSection,
+    },
 };
 </script>
 
