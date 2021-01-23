@@ -1,11 +1,17 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <transport-form></transport-form>
+    </div>
 </template>
 
 <script>
+import TransportForm from "./components/TransportForm.vue"
+
 export default {
     name: "App",
-    components: {},
+    components: {
+        "transport-form": TransportForm
+    },
 };
 </script>
 
