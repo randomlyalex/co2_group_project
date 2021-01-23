@@ -39,7 +39,13 @@ export default {
 name: "question-heating",
 data() {
   return {
-    heatingAmount: null,
+    heatingAmount1: null,
+    heatingAmount2: null,
+    heatingAmount3: null,
+    heatingAmount4: null,
+    heatingAmount5: null,
+    totalHeating: 0,
+    emissionFactor: 0.2532
 
   }
 },
