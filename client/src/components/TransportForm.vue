@@ -1,0 +1,32 @@
+<template>
+    <div>
+        <form>
+            <h2>Car Questions</h2>
+            <label for="miles">How many miles do you travel in a car per week</label>
+            <br>
+            <input type="radio" name="fifty" value="under50" />under 50
+            <input type="radio" name="miles" value="50" />50+
+            <input type="radio" name="miles" value="100" />100+
+            <input type="radio" name="miles" value="150" />150+
+            <input type="radio" name="miles" value="200" />200+
+        </form>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "transport-form",
+    data() {
+        return {
+            transportTotal: 0,
+            carCo2PerKm: 141.9,
+            busCo2PerKm: 104,
+            transportValues: [],
+        };
+    },
+
+};
+</script>
+
+<style>
+</style>
