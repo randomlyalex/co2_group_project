@@ -1,11 +1,15 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <diet-component></diet-component>
+    </div>
 </template>
 
 <script>
+import DietComponent from './components/DietComponent.vue';
+
 export default {
     name: "App",
-    components: {},
+    components: {DietComponent},
 };
 </script>
 

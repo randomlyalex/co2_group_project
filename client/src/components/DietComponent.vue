@@ -2,15 +2,12 @@
 <div class="form-item">
     <div class="slider-wrapper">
         <label for="diet">How often do you eat animal products (meat, fish, dairy, eggs)?</label>
-        <input type="range" id="diet" name="diet" list="diet-types">
-        <datalist id="diet-types">
-            <option value="0" label="Never - I'm vegan"></option>
-            <option value="1" label="Rarely - I'm vegetarian"></option>
-            <option value="2" label="I eat meat rarely"></option>
-            <option value="3" label="I eat meat about once a week"></option>
-            <option value="4" label="I eat meat every day"></option>
-            <option value="5" label="I eat meat for most meals"></option>
-        </datalist>
+        <input type="range" id="diet" name="diet" list="diet-types" v-model="sliderValue">
+        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
+        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
+        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
+        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
+
     </div>
 </div>
 
@@ -18,7 +15,11 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            "sliderValue": null
+        }
+    },
 
 }
 </script>
