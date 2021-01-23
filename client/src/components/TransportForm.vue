@@ -22,8 +22,8 @@ export default {
             // motorbikeCo2PerKm: 141.9,
             busCo2PerKm: 104,
             trainCo2PerKm: 41,
-            // planeCo2PerKm: 104,
-            // ferryCo2PerKm: 104,
+            planeCo2PerKm: 117.5,
+            ferryCo2PerKm: 18,
 
             transportValues: [],
 
@@ -35,8 +35,8 @@ export default {
         // this.motorbikeCo2Emission();
         this.busCo2Emission();
         this.trainCo2Emission();
-        // this.planeCo2Emission();
-        // this.ferryCo2Emission();
+        this.planeCo2Emission();
+        this.ferryCo2Emission();
         this.transportTotal = this.transportValues.reduce(
             (acc, item) => acc + item,
             0
@@ -56,12 +56,12 @@ export default {
       trainCo2Emission() {
         this.transportValues.push(this.trainCo2PerKm * 100)
       },
-      // planeCo2Emission() {
-      //   this.transportValues.push(this.planeCo2PerKm * 100)
-      // },
-      // ferryCo2Emission() {
-      //   this.transportValues.push(this.ferryCo2PerKm * 100)
-      // },
+      planeCo2Emission() {
+        this.transportValues.push(this.planeCo2PerKm * 100)
+      },
+      ferryCo2Emission() {
+        this.transportValues.push(this.ferryCo2PerKm * 100)
+      },
     }
 };
 </script>
