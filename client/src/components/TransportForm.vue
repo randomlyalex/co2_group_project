@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             carCo2PerMile: 88.2,
-            // motorbikeCo2PerMile: 77.7,
+            motorbikeCo2PerMile: 77.7,
             busCo2PerMile: 64.6,
             trainCo2PerMile: 25.5,
             planeCo2PerMile: 73,
@@ -32,7 +32,7 @@ export default {
     },
     created() {
         this.carCo2Emission();
-        // this.motorbikeCo2Emission();
+        this.motorbikeCo2Emission();
         this.busCo2Emission();
         this.trainCo2Emission();
         this.planeCo2Emission();
@@ -47,9 +47,9 @@ export default {
       carCo2Emission() {
         this.transportValues.push(this.carCo2PerMile * 100)
       },
-      // motorbikeCo2Emission() {
-      //   this.transportValues.push(this.motorbikeCo2PerMile * 100)
-      // },
+      motorbikeCo2Emission() {
+        this.transportValues.push(this.motorbikeCo2PerMile * 100)
+      },
       busCo2Emission() {
         this.transportValues.push(this.busCo2PerMile * 100)
       },
