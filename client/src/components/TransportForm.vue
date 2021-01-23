@@ -18,12 +18,12 @@ export default {
     name: "transport-form",
     data() {
         return {
-            carCo2PerKm: 141.9,
-            // motorbikeCo2PerKm: 141.9,
-            busCo2PerKm: 104,
-            trainCo2PerKm: 41,
-            planeCo2PerKm: 117.5,
-            ferryCo2PerKm: 18,
+            carCo2PerMile: 88.2,
+            // motorbikeCo2PerMile: 77.7,
+            busCo2PerMile: 64.6,
+            trainCo2PerMile: 25.5,
+            planeCo2PerMile: 73,
+            ferryCo2PerMile: 11,
 
             transportValues: [],
 
@@ -45,22 +45,22 @@ export default {
     },
     methods: {
       carCo2Emission() {
-        this.transportValues.push(this.carCo2PerKm * 100)
+        this.transportValues.push(this.carCo2PerMile * 100)
       },
       // motorbikeCo2Emission() {
-      //   this.transportValues.push(this.motorbikeCo2PerKm * 100)
+      //   this.transportValues.push(this.motorbikeCo2PerMile * 100)
       // },
       busCo2Emission() {
-        this.transportValues.push(this.busCo2PerKm * 100)
+        this.transportValues.push(this.busCo2PerMile * 100)
       },
       trainCo2Emission() {
-        this.transportValues.push(this.trainCo2PerKm * 100)
+        this.transportValues.push(this.trainCo2PerMile * 100)
       },
       planeCo2Emission() {
-        this.transportValues.push(this.planeCo2PerKm * 100)
+        this.transportValues.push(this.planeCo2PerMile * 100)
       },
       ferryCo2Emission() {
-        this.transportValues.push(this.ferryCo2PerKm * 100)
+        this.transportValues.push(this.ferryCo2PerMile * 100)
       },
     }
 };
