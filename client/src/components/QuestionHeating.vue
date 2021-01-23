@@ -50,6 +50,21 @@ data() {
   }
 },
 props: [],
+methods:{
+calculateEmissionHeating(value){
+return value * this.emissionFactor
+},
+
+calculateTotalHeating(){
+  emission1 = calculateEmissionHeating(heatingAmount1); 
+  emission2 = calculateEmissionHeating(heatingAmount2); 
+  emission3 = calculateEmissionHeating(heatingAmount3); 
+  emission4 = calculateEmissionHeating(heatingAmount4); 
+  emission5 = calculateEmissionHeating(heatingAmount5);
+  this.totalHeating = emission1 + emission2 + emission3 + emission4 + emission5
+
+    },
+  },
 
 
 };
