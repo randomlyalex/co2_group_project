@@ -21,7 +21,7 @@ name: "home-section",
 data(){
     return{
         totalHomeSection: 0,
-     
+        homeQuestionTotals: []
     }
 },
 props:[''],
