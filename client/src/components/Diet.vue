@@ -1,8 +1,16 @@
 <template lang="html">
 <div class="form-item">
     <div class="slider-wrapper">
-        <label for="diet">How often do you eat meat?</label>
-        <input type="range" id="diet" name="diet">
+        <label for="diet">How often do you eat animal products (meat, fish, dairy, eggs)?</label>
+        <input type="range" id="diet" name="diet" list="diet-types">
+        <datalist id="diet-types">
+            <option value="0" label="Never - I'm vegan"></option>
+            <option value="1" label="Rarely - I'm vegetarian"></option>
+            <option value="2" label="I eat meat rarely"></option>
+            <option value="3" label="I eat meat about once a week"></option>
+            <option value="4" label="I eat meat every day"></option>
+            <option value="5" label="I eat meat for most meals"></option>
+        </datalist>
     </div>
 </div>
 
@@ -10,11 +18,18 @@
 
 <script>
 export default {
+    
 
 }
 </script>
 
 <style lang="css" scoped>
+.form-item  {
+    border: solid black;
+    padding: 1em;
+    margin: 1em;
+}
+
 input[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
@@ -28,7 +43,7 @@ input[type=range]::-webkit-slider-runnable-track {
     height: 12.8px;
     cursor: pointer;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse, black);
     border-radius: 25px;
     border: 0px solid #000101;
 }
@@ -44,7 +59,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -3.6px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse black);
 }
 input[type=range]::-moz-range-track {
     width: 100%;
@@ -52,7 +67,7 @@ input[type=range]::-moz-range-track {
     cursor: pointer;
     animate: 0.2s;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse black);
     border-radius: 25px;
     border: 0px solid #000101;
 }
@@ -76,13 +91,13 @@ input[type=range]::-ms-track {
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse black);
     border: 0px solid #000101;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
 }
 input[type=range]::-ms-fill-upper {
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse black);
     border: 0px solid #000101;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
@@ -97,10 +112,10 @@ input[type=range]::-ms-thumb {
     cursor: pointer;
 }
 input[type=range]:focus::-ms-fill-lower {
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg, chartreuse black);
 }
 input[type=range]:focus::-ms-fill-upper {
-    background: linear-gradient(21deg, black, chartreuse);
+    background: linear-gradient(21deg,  chartreuse black);
 }
 
 </style>
