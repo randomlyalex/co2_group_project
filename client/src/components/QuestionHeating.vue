@@ -6,20 +6,21 @@
                 <form>
                     <label for="heating-amount1">Enter amount:</label>
                     <input 
+                    v-model="heatingAmount1" 
                     type="number" id="heating-amount1" name="quantity" value="">
                     <br>
-                    <input type="submit" value="Submit">
+                    <input @click="heatingAmount1" type="submit" value="Submit">
                 </form> 
                 <br>
             <p>Or select one of the following options:</p>
                 <form>
-                <input type="radio" id="heating-amount2" name="small" value="12000">
+                <input type="radio" id="heating-amount2" name="small" value="12000" v-model="heatingAmount2">
                 <label for="heating-amount2">Small house / flat (12,000 kWh)</label><br>
-                <input type="radio" id="heating-amount3" name="medium" value="18000">
+                <input type="radio" id="heating-amount3" name="medium" value="18000" v-model="heatingAmount3">
                 <label for="heating-amount3">Medium (18,000 kWh)</label><br>
-                <input type="radio" id="heating-amount4" name="large" value="27000">
+                <input type="radio" id="heating-amount4" name="large" value="27000" v-model="heatingAmount4">
                 <label for="heating-amount4">Large house (27,000 kWh)</label><br>
-                <input type="radio" id="heating-amount5" name="large" value="5000">
+                <input type="radio" id="heating-amount5" name="large" value="5000" v-model="heatingAmount5">
                 <label for="heating-amount5">Hall of residence (5,000 kWh)</label><br>
                 </form> 
                 <br>
