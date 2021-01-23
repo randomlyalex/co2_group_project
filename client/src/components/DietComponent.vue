@@ -3,10 +3,10 @@
     <div class="slider-wrapper">
         <label for="diet">How often do you eat animal products (meat, fish, dairy, eggs)?</label>
         <input type="range" id="diet" name="diet" list="diet-types" v-model="sliderValue">
-        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
-        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
-        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
-        <p v-if="sliderValue < 25 && sliderValue > 0 ">The slider is {{ sliderValue }}</p>
+        <p v-if="sliderValue < 25 && sliderValue > 0 ">Never, I'm vegan - no food with a face!</p>
+        <p v-if="sliderValue < 50 && sliderValue > 25 ">I'm vegetarian: cheese and eggs are my life</p>
+        <p v-if="sliderValue < 75 && sliderValue > 50 ">I'm partial to the odd sausage</p>
+        <p v-if="sliderValue <= 100 && sliderValue > 75 ">I eat beef all day long</p>
 
     </div>
 </div>
