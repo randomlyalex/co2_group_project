@@ -1,15 +1,21 @@
 <template>
-    <div id="app"></div>
+    <div id="app">
+        <stuff-section></stuff-section>
+    </div>
 </template>
 
 <script>
+import StuffSection from "./components/StuffSection.vue";
+
 export default {
     name: "App",
-    components: {},
+    components: {
+        "stuff-section": StuffSection,
+    },
 };
 </script>
 
-<style>
+<style scoped>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
