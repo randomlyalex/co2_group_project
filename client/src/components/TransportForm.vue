@@ -24,7 +24,19 @@ export default {
             transportValues: [],
         };
     },
-
+    created() {
+        this.carCo2Emission();
+        this.transportTotal = this.transportValues.reduce(
+            (acc, item) => acc + item,
+            0
+        );
+        console.log(this.transportTotal);
+    },
+    methods: {
+      carCo2Emission() {
+        this.transportValues.push(this.carCo2PerKm * 100)
+      },
+    }
 };
 </script>
 
