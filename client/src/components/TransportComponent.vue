@@ -28,34 +28,34 @@ export default {
       };
   },
   mounted() {
-    eventBus.$on("car-co2-emission", (carAnswer) => {
-      this.transportValues.splice(0, 1);
-      this.transportValues.push(carAnswer);
+    eventBus.$once("car-co2-emission", (carAnswer) => {
+      this.transportValues.splice(0, 1, carAnswer);
+      // this.transportValues.push(carAnswer);
       console.log(this.transportTotal)
     })
-    eventBus.$on("motorbike-co2-emission", (motorbikeAnswer) => {
-      this.transportValues.splice(1, 1);
-      this.transportValues.push(motorbikeAnswer);
+    eventBus.$once("motorbike-co2-emission", (motorbikeAnswer) => {
+      this.transportValues.splice(1, 1, motorbikeAnswer);
+      // this.transportValues.push(motorbikeAnswer);
       console.log(this.transportTotal)
     })
-    eventBus.$on("bus-co2-emission", (busAnswer) => {
-      this.transportValues.splice(2, 1);
-      this.transportValues.push(busAnswer);
+    eventBus.$once("bus-co2-emission", (busAnswer) => {
+      this.transportValues.splice(2, 1, busAnswer);
+      // this.transportValues.push(busAnswer);
       console.log(this.transportTotal)
     })
-    eventBus.$on("train-co2-emission", (trainAnswer) => {
-      this.transportValues.splice(3, 1);
-      this.transportValues.push(trainAnswer);
+    eventBus.$once("train-co2-emission", (trainAnswer) => {
+      this.transportValues.splice(3, 1, trainAnswer);
+      // this.transportValues.push(trainAnswer);
       console.log(this.transportTotal)
     })
-    eventBus.$on("plane-co2-emission", (planeAnswer) => {
-      this.transportValues.splice(4, 1);
-      this.transportValues.push(planeAnswer);
+    eventBus.$once("plane-co2-emission", (planeAnswer) => {
+      this.transportValues.splice(4, 1, planeAnswer);
+      // this.transportValues.push(planeAnswer);
       console.log(this.transportTotal)
     })
-    eventBus.$on("ferry-co2-emission", (ferryAnswer) => {
-      this.transportValues.splice(1, 1);
-      this.transportValues.push(ferryAnswer);
+    eventBus.$once("ferry-co2-emission", (ferryAnswer) => {
+      this.transportValues.splice(1, 1, ferryAnswer);
+      // this.transportValues.push(ferryAnswer);
       console.log(this.transportTotal)
     })
   },
