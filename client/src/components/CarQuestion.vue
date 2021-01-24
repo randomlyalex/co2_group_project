@@ -24,13 +24,13 @@ export default {
   },
   methods: {
     carCo2Emission() {
-      let answer = this.carCo2PerMile * this.radioInput;
-      console.log(answer)
-      return answer
+      this.carAnswer = this.carCo2PerMile * this.radioInput;
+      console.log(this.carAnswer);
+      return this.carAnswer
     },
     handleChange() {
       this.carCo2Emission();
-      eventBus.$emit("car-co2-emission", this.answer)
+      eventBus.$emit("car-co2-emission", this.carAnswer)
     },
   },
 }

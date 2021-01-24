@@ -30,6 +30,7 @@ export default {
   mounted() {
     eventBus.$on("car-co2-emission", (carAnswer) => {
       this.transportValues.push(carAnswer);
+      console.log(this.transportTotal)
     })
   },
   methods: {
