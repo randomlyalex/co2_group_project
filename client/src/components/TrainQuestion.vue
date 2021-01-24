@@ -17,7 +17,7 @@ import { eventBus } from "../main.js"
 export default {
   data() {
     return {
-      trainCo2PerMile: 88.2,
+      trainCo2PerMile: 43,
       radioInput: null,
       trainAnswer: null,
     }
