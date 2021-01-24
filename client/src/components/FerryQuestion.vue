@@ -25,7 +25,6 @@ export default {
   methods: {
     ferryCo2Emission() {
       this.ferryAnswer = this.ferryCo2PerMile * this.radioInput;
-      console.log(this.ferryAnswer);
       return this.ferryAnswer
     },
     handleChange() {

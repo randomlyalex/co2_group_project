@@ -25,7 +25,6 @@ export default {
   methods: {
     trainCo2Emission() {
       this.trainAnswer = this.trainCo2PerMile * this.radioInput;
-      console.log(this.trainAnswer);
       return this.trainAnswer
     },
     handleChange() {

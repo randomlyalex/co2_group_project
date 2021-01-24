@@ -6,7 +6,7 @@
     <train-question></train-question>
     <plane-question></plane-question>
     <ferry-question></ferry-question>
-    <p> Your total co2 emissions from travelling: {{transportTotal}} </p>
+    <p> Total co2 from transport: {{transportTotal}} </p>
   </div>
 </template>
 
@@ -30,33 +30,21 @@ export default {
   mounted() {
     eventBus.$on("car-co2-emission", (carAnswer) => {
       this.transportValues.splice(0, 1, carAnswer);
-      // this.transportValues.push(carAnswer);
-      console.log(this.transportTotal)
     })
     eventBus.$on("motorbike-co2-emission", (motorbikeAnswer) => {
       this.transportValues.splice(1, 1, motorbikeAnswer);
-      // this.transportValues.push(motorbikeAnswer);
-      console.log(this.transportTotal)
     })
     eventBus.$on("bus-co2-emission", (busAnswer) => {
       this.transportValues.splice(2, 1, busAnswer);
-      // this.transportValues.push(busAnswer);
-      console.log(this.transportTotal)
     })
     eventBus.$on("train-co2-emission", (trainAnswer) => {
       this.transportValues.splice(3, 1, trainAnswer);
-      // this.transportValues.push(trainAnswer);
-      console.log(this.transportTotal)
     })
     eventBus.$on("plane-co2-emission", (planeAnswer) => {
       this.transportValues.splice(4, 1, planeAnswer);
-      // this.transportValues.push(planeAnswer);
-      console.log(this.transportTotal)
     })
     eventBus.$on("ferry-co2-emission", (ferryAnswer) => {
-      this.transportValues.splice(1, 1, ferryAnswer);
-      // this.transportValues.push(ferryAnswer);
-      console.log(this.transportTotal)
+      this.transportValues.splice(5, 1, ferryAnswer);
     })
   },
   computed: {

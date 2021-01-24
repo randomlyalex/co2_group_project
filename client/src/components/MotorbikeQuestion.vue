@@ -24,7 +24,6 @@ export default {
   methods: {
     motorbikeCo2Emission() {
       this.motorbikeAnswer = this.motorbikeCo2PerMile * this.radioInput;
-      console.log(this.motorbikeAnswer);
       return this.motorbikeAnswer
     },
     handleChange() {

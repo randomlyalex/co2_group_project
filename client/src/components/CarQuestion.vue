@@ -25,7 +25,6 @@ export default {
   methods: {
     carCo2Emission() {
       this.carAnswer = this.carCo2PerMile * this.radioInput;
-      console.log(this.carAnswer);
       return this.carAnswer
     },
     handleChange() {

@@ -25,7 +25,6 @@ export default {
   methods: {
     busCo2Emission() {
       this.busAnswer = this.busCo2PerMile * this.radioInput;
-      console.log(this.busAnswer);
       return this.busAnswer
     },
     handleChange() {

@@ -25,7 +25,6 @@ export default {
   methods: {
     planeCo2Emission() {
       this.planeAnswer = this.planeCo2PerMile * this.radioInput;
-      console.log(this.planeAnswer);
       return this.planeAnswer
     },
     handleChange() {
