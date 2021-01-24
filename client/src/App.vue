@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import TransportComponent from "./components/TransportComponent"
+import TransportComponent from './components/TransportComponent.vue';
 
 export default {
     name: "App",

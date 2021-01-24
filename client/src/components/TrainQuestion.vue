@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      trainCo2PerMile: 88.2,
+      trainCo2PerMile: 25.5,
       radioInput: null,
     }
   },

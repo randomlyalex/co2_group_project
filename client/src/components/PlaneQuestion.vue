@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      planeCo2PerMile: 88.2,
+      planeCo2PerMile: 73,
       radioInput: null,
     }
   },

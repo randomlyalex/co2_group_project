@@ -1,7 +1,7 @@
 <template>
   <div>
     <form id="bus-question">
-    <h2>How many miles do you travel by bus per week</h2>
+    <h2>How many miles do you travel on the bus per week</h2>
     <input type="radio" v-model="radioInput" name="miles" value="50" />under 50
     <input type="radio" v-model="radioInput" name="miles" value="100" />50 - 100
     <input type="radio" v-model="radioInput" name="miles" value="150" />100 - 150
@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      busCo2PerMile: 88.2,
+      busCo2PerMile: 64.6,
       radioInput: null,
     }
   },

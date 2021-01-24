@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      ferryCo2PerMile: 88.2,
+      ferryCo2PerMile: 11,
       radioInput: null,
     }
   },
