@@ -33,6 +33,11 @@ export default {
       this.transportValues.push(carAnswer);
       console.log(this.transportTotal)
     })
+    eventBus.$on("motorbike-co2-emission", (motorbikeAnswer) => {
+      this.transportValues.pop();
+      this.transportValues.push(motorbikeAnswer);
+      console.log(this.transportTotal)
+    })
   },
   computed: {
     transportTotal: function() {
