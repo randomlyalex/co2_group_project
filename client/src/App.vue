@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <stuff-section></stuff-section>
+        <stuff-section
+            v-on:stuff_questions="stuff_questions = $event"
+        ></stuff-section>
     </div>
 </template>
 
@@ -9,6 +11,11 @@ import StuffSection from "./components/StuffSection.vue";
 
 export default {
     name: "App",
+    data() {
+        return {
+            stuff_questions: [],
+        };
+    },
     components: {
         "stuff-section": StuffSection,
     },
