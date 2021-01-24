@@ -18,7 +18,7 @@ import TrainQuestion from "./TrainQuestion";
 import PlaneQuestion from "./PlaneQuestion";
 import FerryQuestion from "./FerryQuestion";
 
-// import { eventBus } from "../main.js"
+import { eventBus } from "../main.js"
 
 export default {
   name: "transport-component",
@@ -28,7 +28,9 @@ export default {
       };
   },
   mounted() {
-
+    eventBus.$on("car-co2-emission", (carAnswer) => {
+      this.transportValues.push(carAnswer);
+    })
   },
   methods: {
 
