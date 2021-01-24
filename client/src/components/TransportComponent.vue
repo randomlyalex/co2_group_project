@@ -38,6 +38,26 @@ export default {
       this.transportValues.push(motorbikeAnswer);
       console.log(this.transportTotal)
     })
+    eventBus.$on("bus-co2-emission", (busAnswer) => {
+      this.transportValues.splice(2, 1);
+      this.transportValues.push(busAnswer);
+      console.log(this.transportTotal)
+    })
+    eventBus.$on("train-co2-emission", (trainAnswer) => {
+      this.transportValues.splice(3, 1);
+      this.transportValues.push(trainAnswer);
+      console.log(this.transportTotal)
+    })
+    eventBus.$on("plane-co2-emission", (planeAnswer) => {
+      this.transportValues.splice(4, 1);
+      this.transportValues.push(planeAnswer);
+      console.log(this.transportTotal)
+    })
+    eventBus.$on("ferry-co2-emission", (ferryAnswer) => {
+      this.transportValues.splice(1, 1);
+      this.transportValues.push(ferryAnswer);
+      console.log(this.transportTotal)
+    })
   },
   computed: {
     transportTotal: function() {
