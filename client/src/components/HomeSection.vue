@@ -1,6 +1,6 @@
 <template>
   <div>
-    <question-heating ></question-heating>
+    <question-heating v-on:heatingTotal="questionsCo2[0] = $event"></question-heating>
     <br>
     <br>
     <question-electricity></question-electricity>
@@ -10,6 +10,7 @@
     <br>
     <br>
     <question-waste></question-waste>
+
   
 
             
@@ -24,11 +25,12 @@ import QuestionWaste from './QuestionWaste.vue'
 
 export default {
 name: "home-section",
-data(){
-    return{
-        totalHomeSection: 0,
-        homeQuestionTotals: []
+data() {
+    return {
+        questionsCo2: []
     }
+},
+computed: {
 },
 props:[''],
 components: {
@@ -39,12 +41,9 @@ components: {
     
 },
 methods: {
-    getTotalOfHome(){
-        return this.totalHomeSection = this.homeQuestionTotals.reduce((a, b) => a + b, 0)
-    }
+},
 }
 
-}
 </script>
 
 <style>
