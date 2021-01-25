@@ -1,14 +1,14 @@
 <template>
     <div id="app">
-        <stuff-section
+        <!-- <stuff-section
             v-on:stuff_questions="stuff_questions = $event"
-        ></stuff-section>
+        ></stuff-section> -->
         <home-section></home-section>
     </div>
 </template>
 
 <script>
-import StuffSection from "./components/StuffSection.vue";
+// import StuffSection from "./components/StuffSection.vue";
 import HomeSection from './components/HomeSection.vue';
 export default {
     name: "App",
@@ -18,7 +18,7 @@ export default {
         };
     },
     components: {
-        "stuff-section": StuffSection,
+        // "stuff-section": StuffSection,
          "home-section": HomeSection,
     },
 };

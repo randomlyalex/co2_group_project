@@ -1,8 +1,14 @@
 <template>
   <div>
-    <question-heating></question-heating>
-    <question-electricity> </question-electricity>
+    <question-heating ></question-heating>
+    <br>
+    <br>
+    <question-electricity></question-electricity>
+    <br>
+    <br>
     <question-water></question-water>
+    <br>
+    <br>
     <question-waste></question-waste>
   
 
@@ -34,7 +40,7 @@ components: {
 },
 methods: {
     getTotalOfHome(){
-        return this.totalHomeSection = homeQuestionTotals.reduce((a, b) => a + b, 0)
+        return this.totalHomeSection = this.homeQuestionTotals.reduce((a, b) => a + b, 0)
     }
 }
 
