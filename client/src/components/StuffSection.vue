@@ -17,6 +17,15 @@ import QuestionComponent from "./QuestionComponent.vue";
 
 export default {
     name: "StuffSection",
+    components: {
+        "question-component": QuestionComponent,
+    },
+    methods: {
+        saveSection: function() {
+            this.$emit("stuff_questions", this.questions);
+        },
+    },
+
     data() {
         return {
             questions: [
@@ -58,15 +67,37 @@ export default {
                         },
                     ],
                 },
+                {
+                    id: 3,
+                    type: "range",
+                    questionHeading: "This is where the question would go?",
+                    questionSubHeading: "hopefully this slider works now",
+                    answers: [
+                        { text: "A little", co2amount: 10 },
+                        {
+                            text: "A little More",
+                            co2amount: 12,
+                        },
+                        {
+                            text: "More Again",
+                            co2amount: 15,
+                        },
+                        { text: "Loads", co2amount: 20 },
+                        { text: "Too Much!", co2amount: 22 },
+                        { text: "Even Mooooore!", co2amount: 52 },
+                        { text: "Astronomical", co2amount: 222 },
+                    ],
+                },
             ],
         };
     },
-    components: {
-        "question-component": QuestionComponent,
-    },
-    methods: {
-        saveSection: function() {
-            this.$emit("stuff_questions", this.questions);
+    computed: {
+        total_stuff_co2: function() {
+            return this.questions.reduce((total, question) => {
+                if (question.co2total > 0) {
+                    return total + question.co2total;
+                }
+            }, 0);
         },
     },
 };
