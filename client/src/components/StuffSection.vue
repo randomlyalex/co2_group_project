@@ -8,7 +8,7 @@
             v-on:question_answers="questions[index].answers = $event"
         >
         </question-component>
-        <button v-on:click="saveSection">Save Section</button>
+        <button v-on:click="saveSection">SaveSection</button>
     </div>
 </template>
 
