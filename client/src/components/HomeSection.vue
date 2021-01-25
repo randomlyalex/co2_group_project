@@ -31,6 +31,9 @@ data() {
     }
 },
 computed: {
+    totalSectionCo2: function() {
+        return this.questionsCo2.reduce((a, b) => a + b, 0)
+    }
 },
 props:[''],
 components: {
