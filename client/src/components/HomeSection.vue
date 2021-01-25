@@ -1,6 +1,9 @@
 <template>
   <div>
-    <question-heating v-on:heatingTotal="questionsCo2[0] = $event"></question-heating>
+    <question-heating 
+    v-on:heatingTotal="questionsCo2[0] = $event"
+    v-on:electricityTotal="questionsCo2[1] = $event">
+    </question-heating>
     <br>
     <br>
     <question-electricity></question-electricity>
