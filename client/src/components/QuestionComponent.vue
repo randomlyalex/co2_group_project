@@ -75,10 +75,12 @@ export default {
     },
     computed: {
         form_range_computed: function() {
-            return (
-                (this.form_range / 100) *
-                (this.data.answers.length - 1)
-            ).toFixed(0);
+            if (this.form_range != null) {
+                return (
+                    (this.form_range / 100) *
+                    (this.data.answers.length - 1)
+                ).toFixed(0);
+            } else return null;
         },
         question_results: function() {
             if (this.form_radio != null) {
