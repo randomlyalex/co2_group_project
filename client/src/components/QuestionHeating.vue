@@ -52,25 +52,17 @@ data() {
 },
 props: [],
 methods:{
-calculateEmissionHeating(value){
-return value * this.emissionFactor
-},
 
-calculateTotalHeating(){
-  const emission = this.calculateEmissionHeating(this.heatingAmount); 
-  this.totalHeating = emission
-
-    },
   },
   computed:{
-    callCalculateTotalHeating: function (){
-    return this.calculateTotalHeating()
-      }
+    heatingCo2Total: function() {
+      return this.heatingAmount * this.emissionFactor
+    }
     },
   };
 
 </script>
 
 <style>
-
+z
 </style>
