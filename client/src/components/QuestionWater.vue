@@ -3,7 +3,7 @@
     <h2>Water</h2>
       <br>
             <p>How much water used in your household??</p>
-                <form>
+                <form v-on:change="handleChange">
                     <label for="waste-amount">Enter amount:</label>
                     <input type="number" id="waste-amount1" name="quantity" v-model="waterAmount"><br>
                 </form> 
@@ -18,26 +18,19 @@ name: "question-water",
 data() {
   return {
     waterAmount: null,
-    totalWater: 0,
     emissionFactor: 0.2532,
   }
 },
 props: [],
 methods:{
-calculateEmissionWater(value){
-return value * this.emissionFactor
-},
-
-calculateTotalWater(){
-  const emission = this.calculateEmissionWater(this.waterAmount); 
-  this.totalWater = emission
-
-    },
+handleChange: function(){
+  this.$emit('waterTotal', this.waterCo2Total)
+}
   },
   computed:{
-    callCalculateTotalWater: function (){
-    return this.calculateTotalWater()
-      }
+    waterCo2Total: function() {
+      return this.waterAmount * this.emissionFactor
+    }
     },
 
 
