@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <transport-component></transport-component>
+        <!-- <transport-component></transport-component> -->
         <stuff-section
             v-on:stuff_questions="stuff_questions = $event"
         ></stuff-section>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TransportComponent from './components/TransportComponent.vue';
+// import TransportComponent from './components/TransportComponent.vue';
 import StuffSection from "./components/StuffSection.vue";
 
 export default {
@@ -20,7 +20,7 @@ export default {
     },
     components: {
         "stuff-section": StuffSection,
-        "transport-component": TransportComponent
+        // "transport-component": TransportComponent
     },
 };
 </script>
