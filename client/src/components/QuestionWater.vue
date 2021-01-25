@@ -4,8 +4,8 @@
       <br>
             <p>How much water used in your household??</p>
                 <form v-on:change="handleChange">
-                    <label for="waste-amount">Enter amount:</label>
-                    <input type="number" id="waste-amount1" name="quantity" v-model="waterAmount"><br>
+                    <label for="water-amount">Enter amount:</label>
+                    <input type="number" id="water-amount" name="water" v-model="waterAmount"><br>
                 </form> 
   </div>
 </template>

@@ -3,7 +3,8 @@
     <question-heating 
     v-on:heatingTotal="questionsCo2[0] = $event"
     v-on:electricityTotal="questionsCo2[1] = $event"
-    v-on:waterTotal="questionsCo2[2] = $event">
+    v-on:waterTotal="questionsCo2[2] = $event"
+    v-on:wasteTotal="questionsCo2[3] = $event">
     </question-heating>
     <br>
     <br>

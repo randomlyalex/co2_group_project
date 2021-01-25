@@ -3,9 +3,9 @@
     <h2>Waste</h2>
       <br>
             <p>How much waste is produced in your household in a week?</p>
-                <form>
+                <form v-on:change="handleChange">
                     <label for="waste-amount">Enter amount:</label>
-                    <input type="number" id="waste-amount1" name="quantity" v-model="wasteAmount"><br>
+                    <input type="number" id="waste-amount1" name="waste" v-model="wasteAmount"><br>
                 </form> 
   </div>
 </template>
@@ -18,26 +18,18 @@ name: "question-waste",
 data() {
   return {
     wasteAmount: null,
-    totalWaste: 0,
     emissionFactor: 0.2532,
   }
 },
 props: [],
 methods:{
-calculateEmissionWaste(value){
-return value * this.emissionFactor
-},
-
-calculateTotalWaste(){
-  const emission = this.calculateEmissionWaste(this.wasteAmount); 
-  this.totalWaste = emission
-
-    },
+handleChange: function(){
+  this.$emit('wasteTotal', this.wasteCo2Total)
+}
   },
   computed:{
-    callCalculateTotalWaste: function (){
-    return this.calculateTotalWaste()
-      }
+    wasteCo2Total: function() {
+      return this.wasteAmount * this.emissionFactor
     },
 
 
