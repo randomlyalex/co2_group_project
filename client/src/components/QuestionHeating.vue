@@ -4,17 +4,16 @@
       <br>    
       
             <p>How much gas is used in your household?</p>
-                <form>
+                <form v-on:change="handleChange">
                     <label for="heating-amount1">Enter amount:</label>
                     <input 
                     v-model="heatingAmount" 
-                    type="number" id="heating-amount1" name="custom-heating" value="">
+                    type="number" id="heating-amount1" name="custom-heating">
                     <br>
-                    <!-- <input @click="heatingAmount1" type="submit" value="Submit"> -->
-                </form> 
-                <br>
+
+
             <p>Or select one of the following options:</p>
-                <form>
+                
                 <input type="radio" id="heating-amount2" name="heating-radio" value="12000" v-model="heatingAmount">
                 <label for="heating-amount2">Small house / flat (12,000 kWh)</label><br>
                 <input type="radio" id="heating-amount3" name="heating-radio" value="18000" v-model="heatingAmount">
@@ -23,7 +22,8 @@
                 <label for="heating-amount4">Large house (27,000 kWh)</label><br>
                 <input type="radio" id="heating-amount5" name="heating-radio" value="5000" v-model="heatingAmount">
                 <label for="heating-amount5">Hall of residence (5,000 kWh)</label><br>
-                </form> 
+              
+                
                 <br>
             <p>Is heating oil, coal, wood or bottled gas used in your household?</p>
                 <input type="radio" id="other-amount1" name="yes-no" value="true" v-model="otherHeatingAmount">
@@ -45,9 +45,6 @@
               
                 <br> --> 
                 </div>
-     
-
-                <!-- <button v-on:click="calculateTotalHeating">Submit</button> -->
                 </form> 
   </div>
 </template>
@@ -64,7 +61,9 @@ data() {
 },
 props: [],
 methods:{
-
+handleChange: function(){
+  this.$emit('heatingTotal', this.heatingCo2Total)
+}
   },
   computed:{
     heatingCo2Total: function() {
