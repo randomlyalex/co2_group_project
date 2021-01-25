@@ -32,10 +32,23 @@
                 <label for="no">No</label><br>
 
                 <div v-if="otherHeatingAmount">
+            <!-- <p>Please select one of the following options:</p>
+            
+                <input type="radio" id="heating-amount2" name="heating-radio" value="12000" v-model="heatingAmount">
+                <label for="heating-amount2">Small house / flat (12,000 kWh)</label><br>
+                <input type="radio" id="heating-amount3" name="heating-radio" value="18000" v-model="heatingAmount">
+                <label for="heating-amount3">Medium (18,000 kWh)</label><br>
+                <input type="radio" id="heating-amount4" name="heating-radio" value="27000" v-model="heatingAmount">
+                <label for="heating-amount4">Large house (27,000 kWh)</label><br>
+                <input type="radio" id="heating-amount5" name="heating-radio" value="5000" v-model="heatingAmount">
+                <label for="heating-amount5">Hall of residence (5,000 kWh)</label><br>
+              
+                <br> --> 
                 </div>
      
 
-                <button v-on:click="calculateTotalHeating">Submit</button>
+                <!-- <button v-on:click="calculateTotalHeating">Submit</button> -->
+                </form> 
   </div>
 </template>
 
@@ -46,7 +59,6 @@ name: "question-heating",
 data() {
   return {
     heatingAmount: null,
-    totalHeating: 0,
     emissionFactor: 0.2532,
   }
 },
@@ -64,5 +76,5 @@ methods:{
 </script>
 
 <style>
-z
+
 </style>
