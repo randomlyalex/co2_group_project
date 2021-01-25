@@ -1,24 +1,15 @@
 <template>
     <div id="app">
-<<<<<<< HEAD
         <diet-component></diet-component>
-=======
         <stuff-section
             v-on:stuff_questions="stuff_questions = $event"
         ></stuff-section>
->>>>>>> dd478efc6e3ade7ac02e734b7041fc4496a8abc6
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-import DietComponent from './components/DietComponent.vue';
-
-export default {
-    name: "App",
-    components: {DietComponent},
-=======
 import StuffSection from "./components/StuffSection.vue";
+import DietComponent from './components/DietComponent.vue';
 
 export default {
     name: "App",
@@ -29,8 +20,9 @@ export default {
     },
     components: {
         "stuff-section": StuffSection,
+        "diet-component": DietComponent
+
     },
->>>>>>> dd478efc6e3ade7ac02e734b7041fc4496a8abc6
 };
 </script>
 
