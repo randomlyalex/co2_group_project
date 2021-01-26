@@ -17,7 +17,7 @@ export default {
 name: "question-water",
 data() {
   return {
-    waterAmount: null,
+    waterAmount: 0,
     emissionFactor: 1,
   }
 },

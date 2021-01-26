@@ -30,7 +30,7 @@ name: "question-electricity",
 
 data(){
     return{
-  electricityAmount: null,
+  electricityAmount: 0,
   emissionFactor: 1,
   }
 },

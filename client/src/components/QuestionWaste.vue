@@ -17,7 +17,7 @@ export default {
 name: "question-waste",
 data() {
   return {
-    wasteAmount: null,
+    wasteAmount: 0,
     emissionFactor: 1,
   }
 },

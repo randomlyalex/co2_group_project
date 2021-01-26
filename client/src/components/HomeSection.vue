@@ -1,6 +1,5 @@
 <template>
   <div>
-  <!-- <div v-on:change="handleChange"> -->
     <question-heating 
     v-on:heatingTotal="questionsCo2[0] = $event"
     ></question-heating>
@@ -19,7 +18,8 @@
     <question-waste 
     v-on:wasteTotal="questionsCo2[3] = $event">>
     </question-waste>
-
+    <br>
+        <button v-on:click="saveSection">Save Section</button>
   
 
             
@@ -49,14 +49,12 @@ components: {
 },
 methods: {
     
-    handleChange: function(){
-        this.$emit('heatingTotal', this.totalSectionCo2)
+    saveSection: function(){
+        this.$emit('home_questions', this.questionsCo2)
     }
 },
 computed: {
-    totalSectionCo2: function() {
-        return this.questionsCo2.reduce((a, b) => a + b, 0)
-    }
+    
 },
 }
 
