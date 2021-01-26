@@ -1,23 +1,34 @@
 <template>
     <div id="app">
-        <diet-component></diet-component>
+        <transport-section
+            v-on:transport_questions="transport_questions = $event"
+        ></transport-section>
+        <stuff-section
+            v-on:stuff_questions="stuff_questions = $event"
+        ></stuff-section>
     </div>
-
 </template>
 
 <script>
-import Diet from "./components/Diet.vue"
-
+import TransportSection from "./components/TransportSection.vue";
+import StuffSection from "./components/StuffSection.vue";
 
 export default {
     name: "App",
+    data() {
+        return {
+            transport_questions: [],
+            stuff_questions: [],
+        };
+    },
     components: {
-        'diet-component': Diet
+        "transport-section": TransportSection,
+        "stuff-section": StuffSection
     },
 };
 </script>
 
-<style>
+<style scoped>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
