@@ -1,12 +1,15 @@
 <template>
 	<div id="app">
-		<button v-on:click="sectionCounter = 0">Diet</button>
-		<button v-on:click="sectionCounter = 1">Transport</button>
-		<button v-on:click="sectionCounter = 2">Stuff</button>
-		<button v-on:click="sectionCounter = 3">Home</button>
-		<button v-on:click="sectionCounter = 4">Results</button>
+		<landing-page
+			v-if="sectionCounter === 0">
+		</landing-page>
+		<button v-on:click="sectionCounter = 1">Diet</button>
+		<button v-on:click="sectionCounter = 2">Transport</button>
+		<button v-on:click="sectionCounter = 3">Stuff</button>
+		<button v-on:click="sectionCounter = 4">Home</button>
+		<button v-on:click="sectionCounter = 5">Results</button>
 		<diet-section
-			v-if="sectionCounter === 0"
+			v-if="sectionCounter === 1"
 			v-on:diet_questions="
 				{
 					diet_questions = $event;
@@ -15,7 +18,7 @@
 			"
 		></diet-section>
 		<transport-section
-			v-if="sectionCounter === 1"
+			v-if="sectionCounter === 2"
 			v-on:transport_questions="
 				{
 					transport_questions = $event;
@@ -24,7 +27,7 @@
 			"
 		></transport-section>
 		<stuff-section
-			v-if="sectionCounter === 2"
+			v-if="sectionCounter === 3"
 			v-on:stuff_questions="
 				{
 					stuff_questions = $event;
@@ -33,7 +36,7 @@
 			"
 		></stuff-section>
 		<home-section 
-			v-if="sectionCounter === 3"
+			v-if="sectionCounter === 4"
 			v-on:home_questions="
 				{
 					home_questions = $event;
@@ -41,7 +44,7 @@
 				}
 			"></home-section>
 		<result-section
-			v-if="sectionCounter === 4"
+			v-if="sectionCounter === 5"
 			v-bind:diet_questions="diet_questions"
 			v-bind:transport_questions="transport_questions"
 			v-bind:home_questions="home_questions"
@@ -51,6 +54,7 @@
 </template>
 
 <script>
+import LandingPage from "./components/LandingPage.vue"
 import HomeSection from './components/HomeSection.vue';
 import TransportSection from './components/TransportSection.vue';
 import StuffSection from './components/StuffSection.vue';
@@ -70,6 +74,7 @@ export default {
 		};
 	},
 	components: {
+		"landing-page": LandingPage,
 		'home-section': HomeSection,
 		'stuff-section': StuffSection,
 		'diet-section': DietSection,
