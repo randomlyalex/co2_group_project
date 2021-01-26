@@ -130,10 +130,10 @@ export default {
     }
   },
   computed: {
-      total_transport_co2: function() {
+      total_question_co2: function() {
           return this.questions.reduce((total, question) => {
-              if (question.co2amount > 0) {
-                  return total + question.co2amount;
+              if (question.co2total > 0) {
+                  return total + question.co2total;
               }
           }, 0);
       },
