@@ -32,86 +32,98 @@ export default {
           id: 1,
           type: "range",
           questionHeading: "In a week, roughly how far do you travel by car?",
-          questionSubHeading: "carqsub",
+          questionSubHeading: "",
           answers: [
             {text: "I don't drive", co2amount: 0},
-            {text: "under 100", co2amount: 229000},
-            {text: "100+", co2amount: 668000},
-            {text: "200+", co2amount: 1150000},
-            {text: "300+", co2amount: 1600000},
-            {text: "400+", co2amount: 2050000},
-            {text: "500+", co2amount: 2750000},
+            {text: "under 100", co2amount: 229},
+            {text: "100+", co2amount: 668},
+            {text: "200+", co2amount: 1150},
+            {text: "300+", co2amount: 1600},
+            {text: "400+", co2amount: 2050},
+            {text: "500+", co2amount: 2750},
           ]
         },
         {
           id: 2,
           type: "range",
           questionHeading: "Roughly how many miles do you travel on a motorbike per week?",
-          questionSubHeading: "sub heading",
+          questionSubHeading: "",
           answers: [
             {text: "I don't own a motorbike", co2amount: 0},
-            {text: "Under 100", co2amount: 208000},
-            {text: "100+", co2amount: 600000},
-            {text: "200+", co2amount: 1000000},
-            {text: "300+", co2amount: 1400000},
-            {text: "400+", co2amount: 1800000},
-            {text: "500+", co2amount: 2400000},
+            {text: "Under 100", co2amount: 208},
+            {text: "100+", co2amount: 600},
+            {text: "200+", co2amount: 1000},
+            {text: "300+", co2amount: 1400},
+            {text: "400+", co2amount: 1800},
+            {text: "500+", co2amount: 2400},
           ]
         },
         {
           id: 3,
           type: "radio",
           questionHeading: "How long do you spend on the bus in an average week?",
-          questionSubHeading: "sub heading",
+          questionSubHeading: "",
           answers: [
             {text: "I don't take the bus", co2amount: 0},
-            {text: "Half an hour", co2amount: 35000},
-            {text: "Up to 2 hours", co2amount: 100000},
-            {text: "Between 2 and 5 hours", co2amount: 300000},
-            {text: "5-10 hours", co2amount: 600000},
-            {text: "more than 10 hours", co2amount: 1000000},
+            {text: "Half an hour", co2amount: 35},
+            {text: "Up to 2 hours", co2amount: 100},
+            {text: "Between 2 and 5 hours", co2amount: 300},
+            {text: "5-10 hours", co2amount: 600},
+            {text: "more than 10 hours", co2amount: 1000},
           ]
         },
         {
           id: 4,
           type: "radio",
           questionHeading: "How many miles do you travel by train in a month?",
-          questionSubHeading: "sub heading",
+          questionSubHeading: "",
           answers: [
             {text: "I don't take the train", co2amount: 0},
-            {text: "Less than 100", co2amount: 15000},
-            {text: "100+", co2amount: 46000},
-            {text: "250+", co2amount: 115000},
-            {text: "500+", co2amount: 229000},
-            {text: "1000+", co2amount: 365000},
+            {text: "Less than 100", co2amount: 15},
+            {text: "100+", co2amount: 46},
+            {text: "250+", co2amount: 115},
+            {text: "500+", co2amount: 229},
+            {text: "1000+", co2amount: 365},
           ]
         },
         {
           id: 5,
           type: "radio",
           questionHeading: "How far do you fly in an average year?",
-          questionSubHeading: "sub heading",
+          questionSubHeading: "",
           answers: [
             {text: "I don't fly anywhere", co2amount: 0},
-            {text: "Up to 200 miles", co2amount: 11000},
-            {text: "200-500 miles", co2amount: 100000},
-            {text: "500-1000 miles", co2amount: 300000},
-            {text: "1000+ miles", co2amount: 600000},
-            {text: "2000+ miles", co2amount: 1000000},
+            {text: "Up to 200 miles", co2amount: 11},
+            {text: "200-500 miles", co2amount: 100},
+            {text: "500-1000 miles", co2amount: 300},
+            {text: "1000+ miles", co2amount: 600},
+            {text: "2000+ miles", co2amount: 1000},
           ]
         },
         {
           id: 6,
           type: "radio",
           questionHeading: "Do you travel by ferry at all during the year? If so, how far?",
-          questionSubHeading: "sub heading",
+          questionSubHeading: "",
           answers: [
             {text: "I haven't recently taken a ferry", co2amount: 0},
-            {text: "Up to 50 miles", co2amount: 35000},
-            {text: "50+ miles", co2amount: 100000},
-            {text: "100+ miles", co2amount: 300000},
-            {text: "250+ miles", co2amount: 600000},
-            {text: "500+ miles", co2amount: 1000000},
+            {text: "Up to 50 miles", co2amount: 35},
+            {text: "50+ miles", co2amount: 100},
+            {text: "100+ miles", co2amount: 300},
+            {text: "250+ miles", co2amount: 600},
+            {text: "500+ miles", co2amount: 1000},
+          ]
+        },
+        {
+          id: 7,
+          type: "checkbox",
+          questionHeading: "Have you bought any of these in the past year?",
+          questionSubHeading: "",
+          answers: [
+            {text: "New car", co2amount: 14000},
+            {text: "New motorbike", co2amount: 9000},
+            {text: "New boat", co2amount: 16000},
+            {text: "New private jet", co2amount: 20000},
           ]
         },
       ]
@@ -120,8 +132,8 @@ export default {
   computed: {
       total_transport_co2: function() {
           return this.questions.reduce((total, question) => {
-              if (question.co2total > 0) {
-                  return total + question.co2total;
+              if (question.co2amount > 0) {
+                  return total + question.co2amount;
               }
           }, 0);
       },
