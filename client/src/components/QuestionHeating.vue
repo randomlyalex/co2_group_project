@@ -23,7 +23,7 @@
                         <input type="radio" id="heating-amount5" name="heating-radio" value="5000" v-model="heatingAmount">
                         <label for="heating-amount5">Hall of residence (5,000 kWh)</label><br>
                       
-                        
+<!--                         
                         <br>
                     <p>Is heating oil, coal, wood or bottled gas used in your household?</p>
                         <input type="radio" id="other-amount1" name="yes-no" value="true" v-model="otherHeatingAmount">
@@ -42,7 +42,7 @@
                                 type="number" id="heating-amount1" name="otherHeatingAmount">
                               </div>
                             <br> 
-                            <input v-on:click="coalVisible=!coalVisible" type="radio" id="other-amount1" name="otherHeatingAmount">
+                            <input v-on:change="displayQuestion(this.value)" type="radio" id="other-amount1" name="otherHeatingAmount">
                             <label for="yes">Coal</label><br>
                               <div v-if="coalVisible">
                                 <label for="other-heating-amount">Enter amount:</label>
@@ -69,7 +69,7 @@
                                 type="number" id="heating-amount1" name="otherHeatingAmount">
                               </div>
                             <br> 
-                        </div>
+                        </div> -->
                 </form> 
   </div>
 </template>
@@ -83,12 +83,12 @@ data() {
     heatingAmount: null,
     emissionFactor: 1,
 
-    otherHeatingAmount: null,
-    heatingOil: null,
-    coalAmount: null,
-    coalVisible: false,
-    wood: null,
-    bottledGas: null,
+    // otherHeatingAmount: null,
+    // heatingOil: null,
+    // coalAmount: null,
+    // coalVisible: false,
+    // wood: null,
+    // bottledGas: null,
   }
 },
 props: [],
@@ -99,8 +99,11 @@ handleChange: function(){
   },
   computed:{
     heatingCo2Total: function() {
-      return (parseInt(this.heatingAmount) + parseInt(this.coalAmount)) * this.emissionFactor
+      return parseInt(this.heatingAmount) * this.emissionFactor
     }
+    // heatingCo2Total: function() {
+    //   return (parseInt(this.heatingAmount) + parseInt(this.coalAmount)) * this.emissionFactor
+    // }
     },
   };
 
