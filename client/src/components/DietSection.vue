@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         saveSection: function() {
-            this.$emit("stuff_questions", this.questions);
+            this.$emit("diet_questions", this.questions);
         },
     },
     data() {
@@ -71,7 +71,7 @@ export default {
         }
     },
     computed: {
-        total_stuff_co2: function() {
+        total_section_co2: function() {
             return this.questions.reduce((total, question) => {
                 if (question.co2total > 0) {
                     return total + question.co2total;
