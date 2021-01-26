@@ -4,7 +4,7 @@
       <br>    
       
             <p>How much gas is used in your household?</p>
-                <form v-on:change="handleChange">
+                <form v-on:input="handleChange">
                         <label for="heating-amount1">Enter amount:</label>
                         <input 
                         v-model="heatingAmount" 

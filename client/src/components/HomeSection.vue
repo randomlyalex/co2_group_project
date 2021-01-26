@@ -2,19 +2,22 @@
   <div>
     <question-heating 
     v-on:heatingTotal="questionsCo2[0] = $event"
-    v-on:electricityTotal="questionsCo2[1] = $event"
-    v-on:waterTotal="questionsCo2[2] = $event"
-    v-on:wasteTotal="questionsCo2[3] = $event">
-    </question-heating>
+    ></question-heating>
     <br>
     <br>
-    <question-electricity></question-electricity>
+    <question-electricity 
+    v-on:electricityTotal="questionsCo2[1] = $event">
+    </question-electricity>
     <br>
     <br>
-    <question-water></question-water>
+    <question-water 
+    v-on:waterTotal="questionsCo2[2] = $event">
+    </question-water>
     <br>
     <br>
-    <question-waste></question-waste>
+    <question-waste 
+    v-on:wasteTotal="questionsCo2[3] = $event">>
+    </question-waste>
 
   
 
