@@ -3,11 +3,17 @@
 		<landing-page
 			v-if="sectionCounter === 0">
 		</landing-page>
-		<button v-on:click="sectionCounter = 1">Diet</button>
-		<button v-on:click="sectionCounter = 2">Transport</button>
-		<button v-on:click="sectionCounter = 3">Stuff</button>
-		<button v-on:click="sectionCounter = 4">Home</button>
-		<button v-on:click="sectionCounter = 5">Results</button>
+		<button
+			v-if="sectionCounter === 0"
+			v-on:click="sectionCounter = 1"
+		>Start</button>
+		<div v-if="sectionCounter !== 0">
+			<button v-on:click="sectionCounter = 1">Diet</button>
+			<button v-on:click="sectionCounter = 2">Transport</button>
+			<button v-on:click="sectionCounter = 3">Stuff</button>
+			<button v-on:click="sectionCounter = 4">Home</button>
+			<button v-on:click="sectionCounter = 5">Results</button>
+		</div>
 		<diet-section
 			v-if="sectionCounter === 1"
 			v-on:diet_questions="
