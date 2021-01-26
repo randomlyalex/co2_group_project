@@ -52,7 +52,8 @@ export default {
                         { text: "All of it! I grow my own veg", co2amount: 0.01 },
                         { text: "A lot! I'm a regular at my local farmers' market", co2amount: 0.02 },
                         { text: "Quite a lot - I try to eat seasonally and sometimes I think about food miles", co2amount: 0.03 },
-                        { text: "Ummmmm I don't know? I buy it in a local supermarket, but where it's been before the supermarket is anyone's guess", co2amount: 0.128 }
+                        { text: "Ummmmm I don't know? I buy it in a local supermarket, but where it's been before the supermarket is anyone's guess", co2amount: 0.128 },
+                        { text: "None of it! I ONLY eat food that has been on a plane - in fact, I have my own private jet just for sandwiches", co2amount: 0.2 }
                     ]
                 },
                 {
