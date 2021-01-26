@@ -1,25 +1,40 @@
 <template>
 	<div id="app">
-		<button v-on:click="selectedSection = 'diet'">Diet</button>
-		<button v-on:click="selectedSection = 'transport'">Transport</button>
-		<button v-on:click="selectedSection = 'stuff'">Stuff</button>
-		<button v-on:click="selectedSection = 'home'">Home</button>
-		<button v-on:click="selectedSection = 'results'">Results</button>
+		<button v-on:click="sectionCounter = 0">Diet</button>
+		<button v-on:click="sectionCounter = 1">Transport</button>
+		<button v-on:click="sectionCounter = 2">Stuff</button>
+		<button v-on:click="sectionCounter = 3">Home</button>
+		<button v-on:click="sectionCounter = 4">Results</button>
 		<diet-section
-			v-if="selectedSection === 'diet'"
-			v-on:diet_questions="diet_questions = $event"
+			v-if="sectionCounter === 0"
+			v-on:diet_questions="
+				{
+					diet_questions = $event;
+					sectionCounter += 1;
+				}
+			"
 		></diet-section>
 		<transport-section
-			v-if="selectedSection === 'transport'"
-			v-on:transport_questions="transport_questions = $event"
+			v-if="sectionCounter === 1"
+			v-on:transport_questions="
+				{
+					transport_questions = $event;
+					sectionCounter += 1;
+				}
+			"
 		></transport-section>
 		<stuff-section
-			v-if="selectedSection === 'stuff'"
-			v-on:stuff_questions="stuff_questions = $event"
+			v-if="sectionCounter === 2"
+			v-on:stuff_questions="
+				{
+					stuff_questions = $event;
+					sectionCounter += 1;
+				}
+			"
 		></stuff-section>
-		<home-section v-if="selectedSection === 'home'"></home-section>
+		<home-section v-if="sectionCounter === 3"></home-section>
 		<result-section
-			v-if="selectedSection === 'results'"
+			v-if="sectionCounter === 4"
 			v-bind:diet_questions="diet_questions"
 			v-bind:transport_questions="transport_questions"
 			v-bind:home_questions="home_questions"
@@ -44,6 +59,7 @@ export default {
 			diet_questions: [],
 			home_questions: [],
 			selectedSection: 'diet',
+			sectionCounter: 0,
 		};
 	},
 	components: {
