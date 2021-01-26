@@ -31,8 +31,7 @@ handleChange: function(){
     wasteCo2Total: function() {
       return this.wasteAmount * this.emissionFactor
     },
-
-
+  }
 }
 </script>
 
