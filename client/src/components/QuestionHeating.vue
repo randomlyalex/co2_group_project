@@ -33,7 +33,7 @@
 
                         <div v-if="otherHeatingAmount">
                     <p>Please select one of the following options:</p>
-                            <input type="radio" id="other-amount1" name="heatingOil" value="heatingOil" v-model="heatingOil">
+                            <input type="radio" id="other-amount1" name="otherHeatingAmount" value="heatingOil" v-model="heatingOil">
                             <label for="yes">Heating oil</label><br>
                               <div v-if="heatingOil">
                                 <label for="other-heating-amount">Enter amount:</label>
@@ -42,16 +42,16 @@
                                 type="number" id="heating-amount1" name="otherHeatingAmount">
                               </div>
                             <br> 
-                            <input type="radio" id="other-amount1" name="coal" value="coal" v-model="coal">
+                            <input v-on:click="coalVisible=!coalVisible" type="radio" id="other-amount1" name="otherHeatingAmount">
                             <label for="yes">Coal</label><br>
-                              <div v-if="coal">
+                              <div v-if="coalVisible">
                                 <label for="other-heating-amount">Enter amount:</label>
                                 <input 
-                                v-model="heatingAmount" 
+                                v-model="coalAmount" 
                                 type="number" id="heating-amount1" name="otherHeatingAmount">
                               </div>
                             <br> 
-                            <input type="radio" id="other-amount1" name="wood" value="wood" v-model="wood">
+                            <input type="radio" id="other-amount1" name="otherHeatingAmount" value="wood" v-model="wood">
                             <label for="yes">Wood</label><br>
                               <div v-if="wood">
                                 <label for="other-heating-amount">Enter amount:</label>
@@ -60,7 +60,7 @@
                                 type="number" id="heating-amount1" name="otherHeatingAmount">
                               </div>
                             <br> 
-                            <input type="radio" id="other-amount1" name="bottledGas-oil" value="bottledGas" v-model="bottledGas">
+                            <input type="radio" id="other-amount1" name="otherHeatingAmount" value="bottledGas" v-model="bottledGas">
                             <label for="yes">Bottled gas</label><br>
                               <div v-if="bottledGas">
                                 <label for="other-heating-amount">Enter amount:</label>
@@ -85,7 +85,8 @@ data() {
 
     otherHeatingAmount: null,
     heatingOil: null,
-    coal: null,
+    coalAmount: null,
+    coalVisible: false,
     wood: null,
     bottledGas: null,
   }
