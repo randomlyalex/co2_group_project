@@ -92,7 +92,7 @@ export default {
         };
     },
     computed: {
-        total_stuff_co2: function() {
+        total_question_co2: function() {
             return this.questions.reduce((total, question) => {
                 if (question.co2total > 0) {
                     return total + question.co2total;
