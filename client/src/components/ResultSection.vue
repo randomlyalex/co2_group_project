@@ -24,7 +24,7 @@ export default {
 	data: function() {
 		return {
 			chartOptions: {
-				labels: ['Diet', 'Transport', 'Stuff', 'Home'],
+				labels: ['Diet', 'Transport', 'Home', 'Stuff'],
 			},
 		};
 	},
@@ -38,9 +38,9 @@ export default {
 		series: function() {
 			return [
 				this.total_diet_co2,
-				this.total_stuff_co2,
 				this.total_transport_co2,
 				this.total_home_co2,
+				this.total_stuff_co2,
 			];
 		},
 		total_diet_co2: function() {
@@ -71,8 +71,8 @@ export default {
 			}, 0);
 		},
 		total_home_co2: function() {
-        return this.home_questions.reduce((a, b) => a + b, 0)
-    }
+			return this.home_questions.reduce((a, b) => a + b, 0);
+		},
 	},
 };
 </script>
