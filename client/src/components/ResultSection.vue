@@ -1,6 +1,11 @@
 <template lang="html">
 	<div>
-		<div>Your carbon footprint is {{ diet_questions[0].co2total }}</div>
+		<div>
+			Your carbon footprint is
+			{{
+				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2
+			}}
+		</div>
 		<apexchart
 			width="500"
 			type="donut"
