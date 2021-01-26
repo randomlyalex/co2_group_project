@@ -1,6 +1,5 @@
 <template>
     <div id="app">
-        <diet-component></diet-component>
         <diet-section
             v-on:stuff_questions="stuff_questions = $event"
         ></diet-section>
@@ -13,9 +12,6 @@
 <script>
 import StuffSection from "./components/StuffSection.vue";
 import DietSection from "./components/DietSection";
-import DietComponent from './components/DietComponent.vue';
-import DietSection from './components/DietSection.vue';
-import DietSection from './components/DietSection.vue';
 
 export default {
     name: "App",
@@ -27,7 +23,6 @@ export default {
     components: {
         "stuff-section": StuffSection,
         "diet-section": DietSection,
-        "diet-component": DietComponent,
     },
 };
 </script>
