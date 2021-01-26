@@ -18,15 +18,16 @@
 			v-on:stuff_questions="stuff_questions = $event"
 		></stuff-section>
 		<home-section v-if="selectedSection === 'home'"></home-section>
+		<result-section v-if="selectedSection === 'results'"></result-section>
 	</div>
 </template>
 
 <script>
-// import StuffSection from "./components/StuffSection.vue";
 import HomeSection from './components/HomeSection.vue';
 import TransportSection from './components/TransportSection.vue';
 import StuffSection from './components/StuffSection.vue';
 import DietSection from './components/DietSection';
+import ResultSection from './components/ResultSection';
 
 export default {
 	name: 'App',
@@ -39,11 +40,11 @@ export default {
 		};
 	},
 	components: {
-		// "stuff-section": StuffSection,
 		'home-section': HomeSection,
 		'stuff-section': StuffSection,
 		'diet-section': DietSection,
 		'transport-section': TransportSection,
+		'result-section': ResultSection,
 	},
 };
 </script>
