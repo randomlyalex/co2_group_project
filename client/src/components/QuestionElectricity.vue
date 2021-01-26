@@ -3,7 +3,7 @@
     <h2>Electricity</h2>
     <br>
             <p>How much electricity is used in your household?</p>
-            <form v-on:change="handleChange">
+            <form v-on:input="handleChange">
                 <label for="eating-amount1">Enter amount:</label>
                 <input type="number" id="electricity-amount1" name="custom-electricity" v-model="electricityAmount"><br>
           
@@ -31,7 +31,7 @@ name: "question-electricity",
 data(){
     return{
   electricityAmount: null,
-  emissionFactor: 0.2532,
+  emissionFactor: 1,
   }
 },
 methods:{

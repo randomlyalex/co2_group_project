@@ -3,7 +3,7 @@
     <h2>Water</h2>
       <br>
             <p>How much water used in your household??</p>
-                <form v-on:change="handleChange">
+                <form v-on:input="handleChange">
                     <label for="water-amount">Enter amount:</label>
                     <input type="number" id="water-amount" name="water" v-model="waterAmount"><br>
                 </form> 
@@ -18,7 +18,7 @@ name: "question-water",
 data() {
   return {
     waterAmount: null,
-    emissionFactor: 0.2532,
+    emissionFactor: 1,
   }
 },
 props: [],

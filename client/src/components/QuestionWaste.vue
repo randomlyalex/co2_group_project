@@ -3,7 +3,7 @@
     <h2>Waste</h2>
       <br>
             <p>How much waste is produced in your household in a week?</p>
-                <form v-on:change="handleChange">
+                <form v-on:input="handleChange">
                     <label for="waste-amount">Enter amount:</label>
                     <input type="number" id="waste-amount1" name="waste" v-model="wasteAmount"><br>
                 </form> 
@@ -18,7 +18,7 @@ name: "question-waste",
 data() {
   return {
     wasteAmount: null,
-    emissionFactor: 0.2532,
+    emissionFactor: 1,
   }
 },
 props: [],
