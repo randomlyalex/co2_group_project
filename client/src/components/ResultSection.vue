@@ -3,7 +3,7 @@
 		<div>Your carbon footprint is {{ diet_questions[0].co2total }}</div>
 		<apexchart
 			width="500"
-			type="bar"
+			type="donut"
 			v-bind:options="this.chartOptions"
 			v-bind:series="this.series"
 		></apexchart>
@@ -19,12 +19,7 @@ export default {
 	data: function() {
 		return {
 			chartOptions: {
-				chart: {
-					id: 'vuechart-example',
-				},
-				xaxis: {
-					categories: ['Diet', 'Stuff', 'Transport', 'Home'],
-				},
+				labels: ['Diet', 'Transport', 'Stuff', 'Home'],
 			},
 		};
 	},
@@ -37,15 +32,10 @@ export default {
 	computed: {
 		series: function() {
 			return [
-				{
-					name: 'series1',
-					data: [
-						this.total_diet_co2,
-						this.total_stuff_co2,
-						this.total_transport_co2,
-						14,
-					],
-				},
+				this.total_diet_co2,
+				this.total_stuff_co2,
+				this.total_transport_co2,
+				14,
 			];
 		},
 		total_diet_co2: function() {
