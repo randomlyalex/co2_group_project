@@ -32,7 +32,14 @@
 				}
 			"
 		></stuff-section>
-		<home-section v-if="sectionCounter === 3"></home-section>
+		<home-section 
+			v-if="sectionCounter === 3"
+			v-on:home_questions="
+				{
+					home_questions = $event;
+					sectionCounter += 1;
+				}
+			"></home-section>
 		<result-section
 			v-if="sectionCounter === 4"
 			v-bind:diet_questions="diet_questions"
