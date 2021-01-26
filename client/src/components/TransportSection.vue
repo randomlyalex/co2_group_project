@@ -46,7 +46,7 @@ export default {
         {
           id: 2,
           type: "range",
-          questionHeading: "Roughly how many miles do you travel on a motorbike per week?",
+          questionHeading: "How many miles do you travel on a motorbike per week?",
           questionSubHeading: "",
           answers: [
             {text: "I don't own a motorbike", co2amount: 0},
@@ -117,13 +117,15 @@ export default {
         {
           id: 7,
           type: "checkbox",
-          questionHeading: "Have you bought any of these in the past year?",
+          questionHeading: "Have you bought any of these vehicles in the past year?",
           questionSubHeading: "",
           answers: [
             {text: "New car", co2amount: 14000},
             {text: "New motorbike", co2amount: 9000},
             {text: "New boat", co2amount: 16000},
+            {text: "New bus", co2amount: 18000},
             {text: "New private jet", co2amount: 20000},
+            {text: "New train", co2amount: 25000},
           ]
         },
       ]
