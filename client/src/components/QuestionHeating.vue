@@ -81,7 +81,7 @@ name: "question-heating",
 data() {
   return {
     heatingAmount: null,
-    emissionFactor: 0.2532,
+    emissionFactor: 1,
 
     otherHeatingAmount: null,
     heatingOil: null,
@@ -99,7 +99,7 @@ handleChange: function(){
   },
   computed:{
     heatingCo2Total: function() {
-      return this.heatingAmount * this.emissionFactor
+      return (parseInt(this.heatingAmount) + parseInt(this.coalAmount)) * this.emissionFactor
     }
     },
   };
