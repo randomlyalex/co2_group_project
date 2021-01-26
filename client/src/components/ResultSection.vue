@@ -5,6 +5,12 @@
 <script>
 export default {
 	name: 'ResultSection',
+	props: [
+		'diet_questions',
+		'transport_questions',
+		'home_questions',
+		'stuff_questions',
+	],
 };
 </script>
 

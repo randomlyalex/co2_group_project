@@ -7,7 +7,7 @@
 		<button v-on:click="selectedSection = 'results'">Results</button>
 		<diet-section
 			v-if="selectedSection === 'diet'"
-			v-on:stuff_questions="diet_questions = $event"
+			v-on:diet_questions="diet_questions = $event"
 		></diet-section>
 		<transport-section
 			v-if="selectedSection === 'transport'"
@@ -18,7 +18,13 @@
 			v-on:stuff_questions="stuff_questions = $event"
 		></stuff-section>
 		<home-section v-if="selectedSection === 'home'"></home-section>
-		<result-section v-if="selectedSection === 'results'"></result-section>
+		<result-section
+			v-if="selectedSection === 'results'"
+			v-bind:diet_questions="diet_questions"
+			v-bind:transport_questions="transport_questions"
+			v-bind:home_questions="home_questions"
+			v-bind:stuff_questions="stuff_questions"
+		></result-section>
 	</div>
 </template>
 
@@ -36,6 +42,7 @@ export default {
 			transport_questions: [],
 			stuff_questions: [],
 			diet_questions: [],
+			home_questions: [],
 			selectedSection: 'diet',
 		};
 	},
