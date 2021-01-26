@@ -103,7 +103,7 @@ export default {
         {
           id: 6,
           type: "radio",
-          questionHeading: "Do you travel by ferry at all during the year? If so, how far?",
+          questionHeading: "Do you travel by ferry at all during the year and if so, how far?",
           questionSubHeading: "",
           answers: [
             {text: "I haven't recently taken a ferry", co2amount: 0},
