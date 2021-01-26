@@ -1,5 +1,6 @@
 <template>
-  <div v-on:change="handleChange">
+  <div>
+  <!-- <div v-on:change="handleChange"> -->
     <question-heating 
     v-on:heatingTotal="questionsCo2[0] = $event"
     ></question-heating>
@@ -38,11 +39,6 @@ data() {
         questionsCo2: []
     }
 },
-computed: {
-    totalSectionCo2: function() {
-        return parseInt(this.questionsCo2).reduce((a, b) => a + b, 0)
-    }
-},
 props:[''],
 components: {
     "question-heating": QuestionHeating,
@@ -52,8 +48,14 @@ components: {
     
 },
 methods: {
+    
     handleChange: function(){
-        this.$emit('heatingTotal', this.heatingCo2Total)
+        this.$emit('heatingTotal', this.totalSectionCo2)
+    }
+},
+computed: {
+    totalSectionCo2: function() {
+        return this.questionsCo2.reduce((a, b) => a + b, 0)
     }
 },
 }

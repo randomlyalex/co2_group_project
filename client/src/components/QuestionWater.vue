@@ -29,7 +29,7 @@ handleChange: function(){
   },
   computed:{
     waterCo2Total: function() {
-      return this.waterAmount * this.emissionFactor
+      return parseInt(this.waterAmount) * this.emissionFactor
     }
     },
 

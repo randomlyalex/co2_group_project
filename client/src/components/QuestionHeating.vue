@@ -97,15 +97,15 @@ handleChange: function(){
   this.$emit('heatingTotal', this.heatingCo2Total)
 }
   },
-  computed:{
-    heatingCo2Total: function() {
-      return parseInt(this.heatingAmount) * this.emissionFactor
-    }
+computed:{
+  heatingCo2Total: function() {
+    return parseInt(this.heatingAmount) * this.emissionFactor
+  }
+  },
+};
     // heatingCo2Total: function() {
     //   return (parseInt(this.heatingAmount) + parseInt(this.coalAmount)) * this.emissionFactor
     // }
-    },
-  };
 
 </script>
 

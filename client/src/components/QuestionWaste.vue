@@ -29,7 +29,7 @@ handleChange: function(){
   },
   computed:{
     wasteCo2Total: function() {
-      return this.wasteAmount * this.emissionFactor
+      return parseInt(this.wasteAmount) * this.emissionFactor
     },
   }
 }

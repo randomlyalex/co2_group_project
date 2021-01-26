@@ -41,7 +41,7 @@ handleChange: function(){
 },
 computed:{
   electricityCo2Total: function() {
-    return this.electricityAmount * this.emissionFactor
+    return parseInt(this.electricityAmount) * this.emissionFactor
   }
   },
 };
