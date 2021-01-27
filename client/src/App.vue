@@ -30,7 +30,9 @@
 					v-on:diet_questions="
 						{
 							diet_questions = $event;
-							sectionCounter += 1;
+							if (resultsVisted) {
+								sectionCounter = 5;
+							} else sectionCounter += 1;
 						}
 					"
 				></diet-section>
@@ -39,7 +41,9 @@
 					v-on:transport_questions="
 						{
 							transport_questions = $event;
-							sectionCounter += 1;
+							if (resultsVisted) {
+								sectionCounter = 5;
+							} else sectionCounter += 1;
 						}
 					"
 				></transport-section>
@@ -48,7 +52,9 @@
 					v-on:stuff_questions="
 						{
 							stuff_questions = $event;
-							sectionCounter += 1;
+							if (resultsVisted) {
+								sectionCounter = 5;
+							} else sectionCounter += 1;
 						}
 					"
 				></stuff-section>
