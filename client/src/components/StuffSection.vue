@@ -14,7 +14,6 @@
 
 <script>
 import QuestionComponent from './QuestionComponent.vue';
-// import StuffQuestions from '../static/stuff_questions.json';
 import QuestionsService from '../services/QuestionsService.js';
 
 export default {
@@ -33,7 +32,7 @@ export default {
 		},
 	},
 	mounted() {
-		this.fetchSectionData(4);
+		this.fetchSectionData(3);
 	},
 
 	data() {

@@ -5,7 +5,7 @@ db.dropDatabase();
 db.questions.insertMany(
     [
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "radio",
             "questionHeading": "Have you bought a new laptop in the last year?",
             "questionSubHeading": "",
@@ -33,7 +33,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "checkbox",
             "questionHeading": "What big purchases have you made in the last year?",
             "questionSubHeading": "(only consider new purchases)",
@@ -53,7 +53,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "How would you rate your internet usage?",
             "questionSubHeading": "(the cloud is someone else's computer!)",
@@ -89,7 +89,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "How often do you get a new mobile phone?",
             "questionSubHeading": "",
@@ -125,7 +125,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "What's your online video habbit like?",
             "questionSubHeading": "Are you still watching?",
@@ -161,7 +161,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "Do you shop online, or in the stores?",
             "questionSubHeading": "Assuming we aren't in the middle of a global pandemic",
@@ -197,7 +197,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "How much do you spend per month of new clothes?",
             "questionSubHeading": "Macklemore made thifting cool again",
@@ -233,7 +233,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "Do you have any pets?",
             "questionSubHeading": "",
@@ -269,7 +269,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "section_id": 4,
+            "section_id": 3,
             "type": "range",
             "questionHeading": "How much a month do you spend on personal care?",
             "questionSubHeading": "Consider Makeup/Personal Grooming services and products",
