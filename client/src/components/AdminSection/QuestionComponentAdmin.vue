@@ -24,6 +24,7 @@
 					<input
 						type="text"
 						placeholder="section id"
+						name="section_id"
 						:value="question.section_id"
 					/>
 				</span>
@@ -33,18 +34,26 @@
 					<input
 						type="text"
 						placeholder="Question Heading"
+						name="questionHeading"
 						:value="question.questionHeading"
 					/>
 					<input
 						type="text"
 						placeholder="Question Heading"
+						name="questionSubHeading"
 						:value="question.questionSubHeading"
 					/>
 					<div v-for="(answer, index) in question.answers" v-bind:key="index">
-						<input type="text" placeholder="text" :value="answer.text" />
+						<input
+							type="text"
+							placeholder="text"
+							v-bind:name="answers[key].text"
+							:value="answer.text"
+						/>
 						<input
 							type="text"
 							placeholder="co2amount"
+							v-bind:name="answers[key].co2amount"
 							:value="answer.co2amount"
 						/>
 						<button
@@ -100,6 +109,7 @@ export default {
 				questionSubHeading: null,
 				answers: [{ text: null, co2amount: null }],
 			},
+			answers: [],
 		};
 	},
 	methods: {
@@ -110,18 +120,18 @@ export default {
 		},
 		updateQuestion: function(event) {
 			//FIX THE UPDATE FUNCTION
-			const question = {
-				section_id: event.target.elements.section_id.value, ///FIX THIS
+			const questionEdited = {
+				section_id: event.target.elements.section_id.value,
 				type: event.target.elements.type.value,
-				questionHeading: event.target.elements.questionHead.value,
-				questionSubHeading: null,
+				questionHeading: event.target.elements.questionHeading.value,
+				questionSubHeading: event.target.elements.questionSubHeading.value,
 				answers: [{ text: null, co2amount: null }],
 			};
 
 			const id = this.question._id;
-			QuestionsService.updateQuestion(question, id).then(() => {
-				question._id = id;
-				this.question = question;
+			QuestionsService.updateQuestion(questionEdited, id).then(() => {
+				this.question._id = id;
+				this.question = questionEdited;
 			});
 			this.editQuestion = false;
 		},

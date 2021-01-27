@@ -7,17 +7,19 @@
 		>
 			<h1>{{ data.questionHeading }}</h1>
 			<h2>{{ data.questionSubHeading }}</h2>
-			<div v-for="(answer, index) in data.answers" :key="index">
-				<!-- v-model below is the only thing i cant make work for both-->
-				<input
-					v-bind:type="data.type"
-					v-bind:id="'question-answer-' + index"
-					v-model="form_check[index]"
-					v-bind:name="data.id"
-				/>
-				<label v-bind:id="'question-answer-' + index">
-					{{ answer.text }}
-				</label>
+			<div>
+				<div v-for="(answer, index) in data.answers" :key="index">
+					<!-- v-model below is the only thing i cant make work for both-->
+					<input
+						v-bind:type="data.type"
+						v-bind:id="'question-answer-' + index"
+						v-model="form_check[index]"
+						v-bind:name="data.id"
+					/>
+					<label v-bind:id="'question-answer-' + index">
+						{{ answer.text }}
+					</label>
+				</div>
 			</div>
 		</form>
 
@@ -253,5 +255,4 @@ input[type='range']:focus::-ms-fill-lower {
 input[type='range']:focus::-ms-fill-upper {
 	background: linear-gradient(21deg, chartreuse black);
 }
-
 </style>
