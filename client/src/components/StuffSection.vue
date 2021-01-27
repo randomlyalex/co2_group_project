@@ -14,7 +14,8 @@
 
 <script>
 import QuestionComponent from './QuestionComponent.vue';
-import StuffQuestions from '../static/stuff_questions.json';
+// import StuffQuestions from '../static/stuff_questions.json';
+import QuestionsService from '../services/QuestionsService.js';
 
 export default {
 	name: 'StuffSection',
@@ -25,11 +26,19 @@ export default {
 		saveSection: function() {
 			this.$emit('stuff_questions', this.questions);
 		},
+		fetchSectionData: function(section_id) {
+			QuestionsService.getQuestionsBySection(section_id).then((questions) => {
+				this.questions = questions;
+			});
+		},
+	},
+	mounted() {
+		this.fetchSectionData(4);
 	},
 
 	data() {
 		return {
-			questions: StuffQuestions,
+			questions: null,
 		};
 	},
 };
