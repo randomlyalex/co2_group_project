@@ -2,7 +2,7 @@
 	<div>
 		<div v-if="!editQuestion">
 			<span>{{ question.questionHeading }}</span>
-			><span></span>
+			<span></span>
 			<span>
 				<button v-on:click="deleteQuestion">
 					Delete
@@ -23,13 +23,50 @@
 				<span>
 					<input
 						type="text"
-						name="name"
-						:value="this.question.questionHeading"
+						placeholder="section id"
+						:value="question.section_id"
 					/>
 				</span>
+
 				<span>
-					<input type="text" name="email" :value="this.question.co2"
-				/></span>
+					<input type="text" placeholder="type" :value="question.type" />
+					<input
+						type="text"
+						placeholder="Question Heading"
+						:value="question.questionHeading"
+					/>
+					<input
+						type="text"
+						placeholder="Question Heading"
+						:value="question.questionSubHeading"
+					/>
+					<div v-for="(answer, index) in question.answers" v-bind:key="index">
+						<input type="text" placeholder="text" :value="answer.text" />
+						<input
+							type="text"
+							placeholder="co2amount"
+							:value="answer.co2amount"
+						/>
+						<button
+							v-on:click.prevent="
+								{
+									question.answers.splice(index);
+								}
+							"
+						>
+							X
+						</button>
+					</div>
+					<button
+						v-on:click.prevent="
+							{
+								question.answers.push({ text: null, co2amount: null });
+							}
+						"
+					>
+						Add answer
+					</button>
+				</span>
 				<span
 					><button
 						v-on:click="
@@ -56,6 +93,13 @@ export default {
 	data() {
 		return {
 			editQuestion: false,
+			questionForm: {
+				section_id: null,
+				type: null,
+				questionHeading: null,
+				questionSubHeading: null,
+				answers: [{ text: null, co2amount: null }],
+			},
 		};
 	},
 	methods: {
@@ -65,17 +109,24 @@ export default {
 			);
 		},
 		updateQuestion: function(event) {
+			//FIX THE UPDATE FUNCTION
 			const question = {
-				tbc: event.target.elements.heading.value,
-				tbc1: event.target.elements.answers.value,
-				tbc2: event.target.elements.co2.value,
+				section_id: event.target.elements.section_id.value, ///FIX THIS
+				type: event.target.elements.type.value,
+				questionHeading: event.target.elements.questionHead.value,
+				questionSubHeading: null,
+				answers: [{ text: null, co2amount: null }],
 			};
+
 			const id = this.question._id;
 			QuestionsService.updateQuestion(question, id).then(() => {
 				question._id = id;
 				this.question = question;
 			});
 			this.editQuestion = false;
+		},
+		mounted() {
+			this.questionForm = this.question;
 		},
 	},
 };
