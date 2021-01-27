@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style>
-.button {
+/* .button {
   min-width: 50px;
   min-height: 10px;
   font-family: 'Nunito', sans-serif;
@@ -101,7 +101,7 @@ button::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* animation: ring 1.5s infinite; */
+  animation: ring 1.5s infinite;
 }
 
 button:hover::after, button:focus::after {
@@ -122,6 +122,6 @@ button:hover::after, button:focus::after {
   }
 
 
-}
+} */
 
 </style>

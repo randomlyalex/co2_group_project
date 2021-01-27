@@ -162,7 +162,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.question-container  {
+/* .question-container  {
   --borderWidth: 3px;
 
   position: relative;
@@ -237,7 +237,7 @@ input[type='range']::-moz-range-track {
 	width: 100%;
 	height: 12.8px;
 	cursor: pointer;
-	/* animate: 0.2s; */
+	animate: 0.2s;
 	box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
 	background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(0, 107, 96) 100%);
 	border-radius: 25px;
@@ -256,7 +256,7 @@ input[type='range']::-ms-track {
 	width: 100%;
 	height: 12.8px;
 	cursor: pointer;
-	/* animate: 0.2s; */
+	animate: 0.2s;
 	background: transparent;
 	border-color: transparent;
 	border-width: 39px 0;
@@ -289,5 +289,5 @@ input[type='range']:focus::-ms-fill-lower {
 input[type='range']:focus::-ms-fill-upper {
 	background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(0, 107, 96) 100%);
 }
-
+ */
 </style>

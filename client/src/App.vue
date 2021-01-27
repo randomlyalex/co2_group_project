@@ -108,7 +108,7 @@ export default {
 	margin-top: 60px;
 }
 
-.breadcrumbs {
+/* .breadcrumbs {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -200,6 +200,6 @@ button:hover::after, button:focus::after {
   }
 
 
-}
+} */
 
 </style>
