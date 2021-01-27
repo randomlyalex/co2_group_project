@@ -7,7 +7,8 @@
 			}}
 		</div>
 		<apexchart
-			width="500"
+			class="chart"
+			width="1000"
 			type="donut"
 			v-bind:options="this.chartOptions"
 			v-bind:series="this.series"
@@ -83,4 +84,11 @@ export default {
 }
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.chart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
