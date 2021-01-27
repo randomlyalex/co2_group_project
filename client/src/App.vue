@@ -5,6 +5,7 @@
 		<button v-on:click="sectionCounter = 2">Stuff</button>
 		<button v-on:click="sectionCounter = 3">Home</button>
 		<button v-on:click="sectionCounter = 4">Results</button>
+		<button v-on:click="sectionCounter = 5">Admin</button>
 		<diet-section
 			v-if="sectionCounter === 0"
 			v-on:diet_questions="
@@ -32,14 +33,15 @@
 				}
 			"
 		></stuff-section>
-		<home-section 
+		<home-section
 			v-if="sectionCounter === 3"
 			v-on:home_questions="
 				{
 					home_questions = $event;
 					sectionCounter += 1;
 				}
-			"></home-section>
+			"
+		></home-section>
 		<result-section
 			v-if="sectionCounter === 4"
 			v-bind:diet_questions="diet_questions"
@@ -47,6 +49,7 @@
 			v-bind:home_questions="home_questions"
 			v-bind:stuff_questions="stuff_questions"
 		></result-section>
+		<admin-section v-if="sectionCounter === 5"></admin-section>
 	</div>
 </template>
 
@@ -56,6 +59,7 @@ import TransportSection from './components/TransportSection.vue';
 import StuffSection from './components/StuffSection.vue';
 import DietSection from './components/DietSection';
 import ResultSection from './components/ResultSection';
+import AdminSection from './components/AdminSection/AdminSectionIndex.vue';
 
 export default {
 	name: 'App',
@@ -75,6 +79,7 @@ export default {
 		'diet-section': DietSection,
 		'transport-section': TransportSection,
 		'result-section': ResultSection,
+		'admin-section': AdminSection,
 	},
 };
 </script>

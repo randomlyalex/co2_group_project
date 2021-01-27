@@ -6,7 +6,7 @@ db.questions.insertMany(
     
     [
         {
-            "id": 1,
+            "section_id": 1,
             "type": "range",
             "questionHeading": "Do you eat animal-origin products?",
             "questionSubHeading": "(meat, fish, eggs, dairy)",
@@ -42,7 +42,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "id": 2,
+            "section_id": 1,
             "type": "range",
             "questionHeading": "How much of your food is locally-sourced?",
             "questionSubHeading": "Fun fact! Did you know that switching to a plant-based diet for just one day a week saves more carbon emissions that switching to 100% locally-sourced food?",
@@ -70,7 +70,7 @@ db.questions.insertMany(
             ]
         },
         {
-            "id": 3,
+            "section_id": 1,
             "type": "range",
             "questionHeading": "How much food do you end up throwing away?",
             "answers": [
