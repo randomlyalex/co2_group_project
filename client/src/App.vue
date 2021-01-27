@@ -36,7 +36,7 @@
 			v-if="sectionCounter === 3"
 			v-on:home_questions="
 				{
-					stuff_questions = $event;
+					home_questions = $event;
 					sectionCounter += 1;
 				}
 			"
