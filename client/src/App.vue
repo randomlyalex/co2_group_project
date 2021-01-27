@@ -134,4 +134,10 @@ export default {
 .main-container {
 	display: flex;
 }
+.right-container {
+	width: 200em;
+}
+.left-container {
+	width: 200em;
+}
 </style>

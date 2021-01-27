@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<button v-on:click="saveSection">Save Section</button>
 		<question-component
 			v-for="(question, index) in questions"
 			:key="index"
