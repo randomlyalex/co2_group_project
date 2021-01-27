@@ -57,6 +57,7 @@
 			v-bind:home_questions="home_questions"
 			v-bind:stuff_questions="stuff_questions"
 		></result-section>
+		<br>
 		<button
 			v-if="sectionCounter === 5"
 			v-on:click="sectionCounter = 0"
