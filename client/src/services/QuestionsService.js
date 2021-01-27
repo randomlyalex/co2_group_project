@@ -4,6 +4,9 @@ export default {
 	getQuestions() {
 		return fetch(baseURL).then((res) => res.json());
 	},
+	getQuestionsBySection(section_id) {
+		return fetch(baseURL + 'section/' + section_id).then((res) => res.json());
+	},
 	addQuestion(question) {
 		return fetch(baseURL, {
 			method: 'POST',
