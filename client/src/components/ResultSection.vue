@@ -72,7 +72,6 @@ export default {
 			}, 0);
 		},
 		total_home_co2: function() {
-<<<<<<< HEAD
       		return this.home_questions.reduce((total, question) => {
 				if (question.co2total) {
 					return total + question.co2total;
@@ -83,12 +82,6 @@ export default {
 		},
 	}
 }
-=======
-			return this.home_questions.reduce((a, b) => a + b, 0);
-		},
-	},
-};
->>>>>>> develop
 </script>
 
 <style lang="css" scoped></style>
