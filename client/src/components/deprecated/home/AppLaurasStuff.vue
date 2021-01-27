@@ -1,32 +1,12 @@
 <template>
 	<div id="app">
-<<<<<<< HEAD
 		<button v-on:click="sectionCounter = 0">Diet</button>
 		<button v-on:click="sectionCounter = 1">Transport</button>
 		<button v-on:click="sectionCounter = 2">Stuff</button>
 		<button v-on:click="sectionCounter = 3">Home</button>
 		<button v-on:click="sectionCounter = 4">Results</button>
-		<button v-on:click="sectionCounter = 5">Admin</button>
 		<diet-section
-=======
-		<landing-page
-			v-if="sectionCounter === 0">
-		</landing-page>
-		<button
->>>>>>> develop
 			v-if="sectionCounter === 0"
-			v-on:click="sectionCounter = 1"
-		>Start</button>
-		<div v-if="sectionCounter !== 0">
-			<button v-on:click="sectionCounter = 1">Diet</button>
-			<button v-on:click="sectionCounter = 2">Transport</button>
-			<button v-on:click="sectionCounter = 3">Stuff</button>
-			<button v-on:click="sectionCounter = 4">Home</button>
-			<button v-on:click="sectionCounter = 5">Results</button>
-		</div>
-		<br>
-		<diet-section
-			v-if="sectionCounter === 1"
 			v-on:diet_questions="
 				{
 					diet_questions = $event;
@@ -35,7 +15,7 @@
 			"
 		></diet-section>
 		<transport-section
-			v-if="sectionCounter === 2"
+			v-if="sectionCounter === 1"
 			v-on:transport_questions="
 				{
 					transport_questions = $event;
@@ -44,7 +24,7 @@
 			"
 		></transport-section>
 		<stuff-section
-			v-if="sectionCounter === 3"
+			v-if="sectionCounter === 2"
 			v-on:stuff_questions="
 				{
 					stuff_questions = $event;
@@ -52,50 +32,30 @@
 				}
 			"
 		></stuff-section>
-<<<<<<< HEAD
-		<home-section
-			v-if="sectionCounter === 3"
-=======
 		<home-section 
-			v-if="sectionCounter === 4"
->>>>>>> develop
+			v-if="sectionCounter === 3"
 			v-on:home_questions="
 				{
 					home_questions = $event;
 					sectionCounter += 1;
 				}
-			"
-<<<<<<< HEAD
-		></home-section>
-=======
-			></home-section>
->>>>>>> develop
+			"></home-section>
 		<result-section
-			v-if="sectionCounter === 5"
+			v-if="sectionCounter === 4"
 			v-bind:diet_questions="diet_questions"
 			v-bind:transport_questions="transport_questions"
-			v-bind:stuff_questions="stuff_questions"
 			v-bind:home_questions="home_questions"
+			v-bind:stuff_questions="stuff_questions"
 		></result-section>
-<<<<<<< HEAD
-		<admin-section v-if="sectionCounter === 5"></admin-section>
-=======
-		<button
-			v-if="sectionCounter === 5"
-			v-on:click="sectionCounter = 0"
-		>Back to Start</button>
->>>>>>> develop
 	</div>
 </template>
 
 <script>
-import LandingPage from "./components/LandingPage.vue"
 import HomeSection from './components/HomeSection.vue';
 import TransportSection from './components/TransportSection.vue';
 import StuffSection from './components/StuffSection.vue';
 import DietSection from './components/DietSection';
 import ResultSection from './components/ResultSection';
-import AdminSection from './components/AdminSection/AdminSectionIndex.vue';
 
 export default {
 	name: 'App',
@@ -110,13 +70,11 @@ export default {
 		};
 	},
 	components: {
-		"landing-page": LandingPage,
 		'home-section': HomeSection,
 		'stuff-section': StuffSection,
 		'diet-section': DietSection,
 		'transport-section': TransportSection,
 		'result-section': ResultSection,
-		'admin-section': AdminSection,
 	},
 };
 </script>
