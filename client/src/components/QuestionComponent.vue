@@ -198,6 +198,7 @@ export default {
 
 .question-container {
 	
+	border: 1px solid rgb(63, 63, 63);
 	padding: 1em;
 	margin: 1em;
 }
@@ -290,4 +291,5 @@ input[type='range']:focus::-ms-fill-upper {
 	background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgb(0, 107, 96) 100%);
 }
  */
+
 </style>

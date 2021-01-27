@@ -1,14 +1,17 @@
 <template lang="html">
 	<div>
-		<div>
-			Your carbon footprint is
-			{{
-				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2 + this.total_home_co2
-			}}
+		<h1>Results</h1>
+		<div id="footprint">
+			Your carbon footprint is<br>
+			<h1>{{
+				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2
+			}} tonnes of Co2</h1>
 		</div>
-		<apexchart
+		<!-- <apexchart
 			class="chart"
-			width="1000"
+			width="1000" -->
+		<apexchart id="donutchart"
+			width="500"
 			type="donut"
 			v-bind:options="this.chartOptions"
 			v-bind:series="this.series"
@@ -85,10 +88,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.chart {
+/* .chart {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 50%; */
+#footprint {
+	box-sizing: border-box;
+}
+#donutchart {
+	display: inline-block;
+	box-sizing: border-box;
 }
 </style>
