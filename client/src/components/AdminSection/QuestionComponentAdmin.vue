@@ -21,27 +21,38 @@
 		<div v-if="editQuestion">
 			<form v-on:submit.prevent="updateQuestion">
 				<input
-					type="text"
+					type="number"
 					placeholder="section id"
-					v-model.number="questionForm.section_id"
+					v-model="questionForm.section_id"
+					required
 				/>
-				<input type="text" placeholder="type" v-model="questionForm.type" />
+				<select v-model="questionForm.type" required>
+					<option value="" selected disabled hidden>Choose Type</option>
+					<option value="checkbox">Checkbox</option>
+					<option value="radio">Radio</option>
+					<option value="range">Range</option>
+				</select>
 				<input
 					type="text"
 					placeholder="Question Heading"
 					v-model="questionForm.questionHeading"
+					required
 				/>
 				<input
 					type="text"
-					placeholder="Question Heading"
+					placeholder="Question Sub Heading"
 					v-model="questionForm.questionSubHeading"
 				/>
 				<div v-for="(answer, index) in questionForm.answers" v-bind:key="index">
-					<input type="text" placeholder="text" v-model="answer.text" />
 					<input
 						type="text"
+						placeholder="answer choice"
+						v-model="answer.text"
+					/>
+					<input
+						type="number"
 						placeholder="co2amount"
-						v-model.number="answer.co2amount"
+						v-model="answer.co2amount"
 					/>
 					<button
 						v-if="index + 1 === questionForm.answers.length"
