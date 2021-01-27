@@ -30,9 +30,9 @@
 					v-on:diet_questions="
 						{
 							diet_questions = $event;
-							if (resultsVisted) {
-								sectionCounter = 5;
-							} else sectionCounter += 1;
+							if (!resultsVisted) {
+								sectionCounter += 1;
+							}
 						}
 					"
 				></diet-section>
@@ -41,9 +41,9 @@
 					v-on:transport_questions="
 						{
 							transport_questions = $event;
-							if (resultsVisted) {
-								sectionCounter = 5;
-							} else sectionCounter += 1;
+							if (!resultsVisted) {
+								sectionCounter += 1;
+							}
 						}
 					"
 				></transport-section>
@@ -52,9 +52,9 @@
 					v-on:stuff_questions="
 						{
 							stuff_questions = $event;
-							if (resultsVisted) {
-								sectionCounter = 5;
-							} else sectionCounter += 1;
+							if (!resultsVisted) {
+								sectionCounter += 1;
+							}
 						}
 					"
 				></stuff-section>
@@ -63,7 +63,9 @@
 					v-on:home_questions="
 						{
 							home_questions = $event;
-							sectionCounter += 1;
+							if (!resultsVisted) {
+								sectionCounter += 1;
+							}
 							resultsVisted = true;
 						}
 					"
