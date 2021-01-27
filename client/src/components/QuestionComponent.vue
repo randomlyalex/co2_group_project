@@ -162,7 +162,7 @@ export default {
 
 <style lang="css" scoped>
 .question-container {
-	border: solid black;
+	border: 1px solid rgb(63, 63, 63);
 	padding: 1em;
 	margin: 1em;
 }
@@ -253,4 +253,5 @@ input[type='range']:focus::-ms-fill-lower {
 input[type='range']:focus::-ms-fill-upper {
 	background: linear-gradient(21deg, chartreuse black);
 }
+
 </style>
