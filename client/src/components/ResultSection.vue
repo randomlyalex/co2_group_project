@@ -3,7 +3,7 @@
 		<div>
 			Your carbon footprint is
 			{{
-				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2
+				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2 + this.total_home_co2
 			}}
 		</div>
 		<apexchart
@@ -31,15 +31,15 @@ export default {
 	props: [
 		'diet_questions',
 		'transport_questions',
-		'home_questions',
 		'stuff_questions',
+		'home_questions'
 	],
 	computed: {
 		series: function() {
 			return [
 				this.total_diet_co2,
-				this.total_stuff_co2,
 				this.total_transport_co2,
+				this.total_stuff_co2,
 				this.total_home_co2,
 			];
 		},
@@ -71,10 +71,16 @@ export default {
 			}, 0);
 		},
 		total_home_co2: function() {
-        return this.home_questions.reduce((a, b) => a + b, 0)
-    }
-	},
-};
+      		return this.home_questions.reduce((total, question) => {
+				if (question.co2total) {
+					return total + question.co2total;
+				} else {
+					return total;
+				}
+			}, 0);
+		},
+	}
+}
 </script>
 
 <style lang="css" scoped></style>
