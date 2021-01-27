@@ -15,9 +15,6 @@
 			<button v-on:click="sectionCounter = 5">Results</button>
 		</div>
 		<br>
-		<div v-if="sectionCounter !== 0 && sectionCounter !== 5">
-			Running total: {{}}
-		</div>
 		<diet-section
 			v-if="sectionCounter === 1"
 			v-on:diet_questions="
