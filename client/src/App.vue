@@ -49,13 +49,14 @@
 					home_questions = $event;
 					sectionCounter += 1;
 				}
-			"></home-section>
+			"
+			></home-section>
 		<result-section
 			v-if="sectionCounter === 5"
 			v-bind:diet_questions="diet_questions"
 			v-bind:transport_questions="transport_questions"
-			v-bind:home_questions="home_questions"
 			v-bind:stuff_questions="stuff_questions"
+			v-bind:home_questions="home_questions"
 		></result-section>
 		<button
 			v-if="sectionCounter === 5"
