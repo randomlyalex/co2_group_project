@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<button v-on:click="sectionCounter = 7">Admin</button>
 		<landing-page v-if="sectionCounter === 0"> </landing-page>
 		<button v-if="sectionCounter === 0" v-on:click="sectionCounter = 1">
 			Start
@@ -11,6 +12,7 @@
 			<button v-on:click="sectionCounter = 4">Home</button>
 			<button v-on:click="sectionCounter = 5">Results</button>
 		</div>
+
 		<br />
 		<diet-section
 			v-if="sectionCounter === 1"
@@ -55,6 +57,7 @@
 			v-bind:stuff_questions="stuff_questions"
 			v-bind:home_questions="home_questions"
 		></result-section>
+		<admin-section v-if="sectionCounter === 7"></admin-section>
 		<button v-if="sectionCounter === 5" v-on:click="sectionCounter = 0">
 			Back to Start
 		</button>
