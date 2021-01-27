@@ -36,16 +36,17 @@
 			v-if="sectionCounter === 3"
 			v-on:home_questions="
 				{
-					home_questions = $event;
+					stuff_questions = $event;
 					sectionCounter += 1;
 				}
-			"></home-section>
+			"
+			></home-section>
 		<result-section
 			v-if="sectionCounter === 4"
 			v-bind:diet_questions="diet_questions"
 			v-bind:transport_questions="transport_questions"
-			v-bind:home_questions="home_questions"
 			v-bind:stuff_questions="stuff_questions"
+			v-bind:home_questions="home_questions"
 		></result-section>
 	</div>
 </template>
