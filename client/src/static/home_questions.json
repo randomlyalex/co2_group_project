@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "type": "range",
+        "questionHeading": "How many people are there in your household?",
+        "questionSubHeading": "",
+        "answers": [
+            {
+                "text": "Just me",
+                "co2amount": 1
+            },
+            {
+                "text": "Me and hundred cats",
+                "co2amount": 1.2
+            },
+            {
+                "text": "2",
+                "co2amount": 1.5
+            },
+            {
+                "text": "3",
+                "co2amount": 1.7
+            },
+            {
+                "text": "4",
+                "co2amount": 1.9
+            },
+            {
+                "text": "There are too many people here, HELP!",
+                "co2amount": 2.1
+            },
+            {
+                "text": "I can't count",
+                "co2amount": 0
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "type": "radio",
+        "questionHeading": "Heating",
+        "questionSubHeading": "How much gas is used in your household?",
+        "answers": [
+            {
+                "text": "Small house / flat (12,000 kWh)",
+                "co2amount": 1
+            },
+            {
+                "text": "Medium (18,000 kWh)",
+                "co2amount": 1.5
+            },
+            {
+                "text": "Large house (27,000 kWh)",
+                "co2amount": 2.5
+            },
+            {
+                "text": "Hall of residence (5,000 kWh)",
+                "co2amount": 0.5
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "type": "radio",
+        "questionHeading": "Electricity",
+        "questionSubHeading": "How much electricity is used in your household?",
+        "answers": [
+            {
+                "text": "Small house / flat (3,000 kWh)",
+                "co2amount": 1
+            },
+            {
+                "text": "Medium (4,800 kWh)",
+                "co2amount": 1.5
+            },
+            {
+                "text": "Large house (7,000 kWh)",
+                "co2amount": 2
+            },
+            {
+                "text": "Hall of residence (2,000 kWh)",
+                "co2amount": 0.5
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "type": "range",
+        "questionHeading": "Water",
+        "questionSubHeading": "How much water used in your household?",
+        "answers": [
+            {
+                "text": "None, I'm on vodka",
+                "co2amount": 0
+            },
+            {
+                "text": "I'm on budget mode",
+                "co2amount": 2
+            },
+            {
+                "text": "A reasonable amount",
+                "co2amount": 3
+            },
+            {
+                "text": "Sometimes I leave the tap open while brushing teeth",
+                "co2amount": 4
+            },
+            {
+                "text": "A lot",
+                "co2amount": 22
+            },
+            {
+                "text": "A lot, I'm a mermaid",
+                "co2amount": 222
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "type": "range",
+        "questionHeading": "Waste",
+        "questionSubHeading": "How much waste is produced in your household in a week?",
+        "answers": [
+            {
+                "text": "I'm zero waste",
+                "co2amount": 0.1
+            },
+            {
+                "text": "I reuse or recycle stuff",
+                "co2amount": 2
+            },
+            {
+                "text": "I recycle as much as I can",
+                "co2amount": 3
+            },
+            {
+                "text": "I think I'm an average waster",
+                "co2amount": 4
+            },
+            {
+                "text": "You can't imagine...",
+                "co2amount": 22
+            },
+            {
+                "text": "I waste a lot, but mostly it's time",
+                "co2amount": 0
+            }
+        ]
+    }
+]
