@@ -101,9 +101,6 @@ export default {
 
 <style scoped>
 
-.body {
-	background-color: yellowgreen;
-}
 
 #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
