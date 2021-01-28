@@ -48,7 +48,6 @@
 				"
 			></transport-section>
 			<stuff-section
-				v-bind:stuff_questions="stuff_questions"
 				v-if="sectionCounter === 3"
 				v-on:stuff_questions="
 					{
@@ -97,7 +96,7 @@ import StuffSection from './components/StuffSection.vue';
 import DietSection from './components/DietSection';
 import ResultSection from './components/ResultSection';
 import AdminSection from './components/AdminSection/AdminSectionIndex.vue';
-import QuestionsService from './services/QuestionsService.js';
+// import QuestionsService from './services/QuestionsService.js';
 
 export default {
 	name: 'App',
@@ -121,16 +120,16 @@ export default {
 		'result-section': ResultSection,
 		'admin-section': AdminSection,
 	},
-	created() {
-		this.fetchSectionData(3);
-	},
-	methods: {
-		fetchSectionData: function(section_id) {
-			QuestionsService.getQuestionsBySection(section_id).then((questions) => {
-				this.stuff_questions = questions;
-			});
-		},
-	},
+	// mounted() {
+	// 	this.fetchSectionData(3);
+	// },
+	// methods: {
+	// 	fetchSectionData: function(section_id) {
+	// 		QuestionsService.getQuestionsBySection(section_id).then((questions) => {
+	// 			this.stuff_questions = questions;
+	// 		});
+	// 	},
+	// },
 };
 </script>
 
