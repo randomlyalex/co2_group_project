@@ -51,7 +51,7 @@
         "id": 3,
         "type": "range",
         "questionHeading": "This is where the question would go?",
-        "questionSubHeading": "hopefully this slider works now",
+        "questionSubHeading": "",
         "answers": [
             {
                 "text": "A little",

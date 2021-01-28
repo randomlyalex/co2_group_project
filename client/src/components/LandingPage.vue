@@ -1,6 +1,13 @@
 <template>
 <div>
-    <img src="@/assets/Carbonbon.jpg">
+    <img id="logo" src="@/assets/Carbonbon.jpg">
+    <img id="solved-global-warming" src="@/assets/solved_global_warming.jpg">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 </template>
 
@@ -13,8 +20,11 @@ export default {
 
 <style lang="css" scoped>
 
-img {
+#logo {
   width: 70%;
+}
+#solved-global-warming {
+  width: 40%;
 }
 
 </style>
