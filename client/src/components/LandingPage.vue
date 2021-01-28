@@ -6,8 +6,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
 </div>
 </template>
 
@@ -21,7 +19,7 @@ export default {
 <style lang="css" scoped>
 
 #logo {
-  width: 70%;
+  width: 80%;
 }
 #solved-global-warming {
   width: 40%;

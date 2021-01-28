@@ -7,9 +7,6 @@
 				this.total_diet_co2 + this.total_stuff_co2 + this.total_transport_co2
 			}} tonnes of Co2</h1>
 		</div>
-		<!-- <apexchart
-			class="chart"
-			width="1000" -->
 		<apexchart id="donutchart"
 			width="800"
 			type="donut"
@@ -87,12 +84,10 @@ export default {
 }
 </script>
 
+
+
 <style lang="css" scoped>
-/* .chart {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; */
+
 #footprint {
 	box-sizing: border-box;
 }

@@ -28,8 +28,9 @@
 		>
 			<h1>{{ data.questionHeading }}</h1>
 			<h2>{{ data.questionSubHeading }}</h2>
-			<div v-for="(answer, index) in data.answers" :key="index">
-				<input
+			<div class="radio-section" v-for="(answer, index) in data.answers" :key="index">
+				<input 
+					class="radio-element"
 					v-bind:type="data.type"
 					v-bind:id="'question-answer-' + index"
 					v-model="form_radio"
@@ -161,27 +162,30 @@ export default {
 };
 </script>
 
+
+
+
 <style lang="css" scoped>
+
 .question-container  {
-  --borderWidth: 3px;
-  color: white;
-  position: relative;
-  border-radius: var(--borderWidth);
+	--borderWidth: 3px;
+	color: white;
+	position: relative;
+	border-radius: var(--borderWidth);
 }
 .question-container :after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 6s ease alternate infinite;
-  background-size: 300% 300%;
+	content: '';
+	position: absolute;
+	top: calc(-1 * var(--borderWidth));
+	left: calc(-1 * var(--borderWidth));
+	height: calc(100% + var(--borderWidth) * 2);
+	width: calc(100% + var(--borderWidth) * 2);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
 }
-
 
 @keyframes animatedgradient {
   0% {
@@ -194,13 +198,17 @@ export default {
     background-position: 0% 50%;
   }
 }
-
-
 .question-container {
-	
 	padding: 1em;
 	margin: 1em;
 }
+
+
+
+
+
+
+
 input[type='range'] {
 	-webkit-appearance: none;
 	margin: 10px 0;
@@ -290,4 +298,6 @@ input[type='range']:focus::-ms-fill-lower {
 }
 input[type='range']:focus::-ms-fill-upper {
 	background: white;
-}</style>
+}
+
+</style>
