@@ -33,6 +33,7 @@
 				<input type="text" placeholder="answer choice" v-model="answer.text" />
 				<input
 					type="number"
+					step=".001"
 					placeholder="co2amount"
 					v-model="answer.co2amount"
 				/><button

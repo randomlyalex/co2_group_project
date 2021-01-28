@@ -51,6 +51,7 @@
 					/>
 					<input
 						type="number"
+						step=".001"
 						placeholder="co2amount"
 						v-model="answer.co2amount"
 					/>
