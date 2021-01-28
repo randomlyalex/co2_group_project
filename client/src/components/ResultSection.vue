@@ -25,7 +25,7 @@ export default {
 	data: function() {
 		return {
 			chartOptions: {
-				labels: ['Diet', 'Transport', 'Home', 'Stuff'],
+				labels: ['Diet', 'Transport', 'Stuff', 'Home'],
 			},
 		};
 	},
