@@ -7,7 +7,7 @@
 		>
 			<h1>{{ data.questionHeading }}</h1>
 			<h2>{{ data.questionSubHeading }}</h2>
-			<div>
+			<div class="answers-container">
 				<div v-for="(answer, index) in data.answers" :key="index">
 					<!-- v-model below is the only thing i cant make work for both-->
 					<input
