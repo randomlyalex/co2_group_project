@@ -24,63 +24,64 @@
 			</div>
 		</div>
 		<div class="main-container">
-			<div class="left-container">
-				<diet-section
-					v-if="sectionCounter === 1"
-					v-on:diet_questions="
-						{
-							diet_questions = $event;
-							if (!resultsVisted) {
-								sectionCounter += 1;
-							}
-						}
-					"
-				></diet-section>
-				<transport-section
-					v-if="sectionCounter === 2"
-					v-on:transport_questions="
-						{
-							transport_questions = $event;
-							if (!resultsVisted) {
-								sectionCounter += 1;
-							}
-						}
-					"
-				></transport-section>
-				<stuff-section
-					v-if="sectionCounter === 3"
-					v-on:stuff_questions="
-						{
-							stuff_questions = $event;
-							if (!resultsVisted) {
-								sectionCounter += 1;
-							}
-						}
-					"
-				></stuff-section>
-				<home-section
-					v-if="sectionCounter === 4"
-					v-on:home_questions="
-						{
-							home_questions = $event;
-							if (!resultsVisted) {
-								sectionCounter += 1;
-							}
-							resultsVisted = true;
-						}
-					"
-				></home-section>
-				<admin-section v-if="sectionCounter === 7"></admin-section>
-			</div>
-			<div class="right-container">
-				<result-section
-					v-if="sectionCounter === 5 || resultsVisted === true"
-					v-bind:diet_questions="diet_questions"
-					v-bind:transport_questions="transport_questions"
-					v-bind:stuff_questions="stuff_questions"
-					v-bind:home_questions="home_questions"
-				></result-section>
-			</div>
+			<!-- <div class="left-container"> -->
+			<diet-section
+				v-if="sectionCounter === 1"
+				v-on:diet_questions="
+					{
+						diet_questions = $event;
+						if (!resultsVisted) {
+							sectionCounter += 1;
+						} else sectionCounter = 5;
+					}
+				"
+			></diet-section>
+			<transport-section
+				v-if="sectionCounter === 2"
+				v-on:transport_questions="
+					{
+						transport_questions = $event;
+						if (!resultsVisted) {
+							sectionCounter += 1;
+						} else sectionCounter = 5;
+					}
+				"
+			></transport-section>
+			<stuff-section
+				v-bind:stuff_questions="stuff_questions"
+				v-if="sectionCounter === 3"
+				v-on:stuff_questions="
+					{
+						stuff_questions = $event;
+						if (!resultsVisted) {
+							sectionCounter += 1;
+						} else sectionCounter = 5;
+					}
+				"
+			></stuff-section>
+			<home-section
+				v-if="sectionCounter === 4"
+				v-on:home_questions="
+					{
+						home_questions = $event;
+						if (!resultsVisted) {
+							sectionCounter += 1;
+						} else sectionCounter = 5;
+						resultsVisted = true;
+					}
+				"
+			></home-section>
+			<admin-section v-if="sectionCounter === 7"></admin-section>
+			<!-- </div>
+			<div class="right-container"> -->
+			<result-section
+				v-if="sectionCounter === 5"
+				v-bind:diet_questions="diet_questions"
+				v-bind:transport_questions="transport_questions"
+				v-bind:stuff_questions="stuff_questions"
+				v-bind:home_questions="home_questions"
+			></result-section>
+			<!-- </div> -->
 		</div>
 		<!-- <button v-if="sectionCounter === 5" v-on:click="sectionCounter = 0">
 			Back to Start
@@ -96,6 +97,7 @@ import StuffSection from './components/StuffSection.vue';
 import DietSection from './components/DietSection';
 import ResultSection from './components/ResultSection';
 import AdminSection from './components/AdminSection/AdminSectionIndex.vue';
+import QuestionsService from './services/QuestionsService.js';
 
 export default {
 	name: 'App',
@@ -119,6 +121,16 @@ export default {
 		'result-section': ResultSection,
 		'admin-section': AdminSection,
 	},
+	created() {
+		this.fetchSectionData(3);
+	},
+	methods: {
+		fetchSectionData: function(section_id) {
+			QuestionsService.getQuestionsBySection(section_id).then((questions) => {
+				this.stuff_questions = questions;
+			});
+		},
+	},
 };
 </script>
 
@@ -131,7 +143,7 @@ export default {
 	color: #2c3e50;
 	margin-top: 60px;
 }
-.main-container {
+/* .main-container {
 	display: flex;
 }
 .right-container {
@@ -139,5 +151,5 @@ export default {
 }
 .left-container {
 	width: 200em;
-}
+} */
 </style>
