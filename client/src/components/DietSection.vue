@@ -9,7 +9,7 @@
 		>
 		</question-component>
 		<button 
-		class="button"
+		class="sectionButton"
 		v-on:click="saveSection">Save Section</button>
 	</div>
 </template>

@@ -4,16 +4,16 @@
 			v-if="sectionCounter === 0">
 		</landing-page>
 		<button
-		class="button"
+		class="startbutton"
 			v-if="sectionCounter === 0"
 			v-on:click="sectionCounter = 1"
 		>Start</button>
 		<div class="breadcrumbs" v-if="sectionCounter !== 0">
-			<button class="button" v-on:click="sectionCounter = 1">Diet</button>
-			<button class="button" v-on:click="sectionCounter = 2">Transport</button>
-			<button class="button" v-on:click="sectionCounter = 3">Stuff</button>
-			<button class="button" v-on:click="sectionCounter = 4">Home</button>
-			<button class="button" v-on:click="sectionCounter = 5">Results</button>
+			<button class="navbutton" v-on:click="sectionCounter = 1">Diet</button>
+			<button class="navbutton" v-on:click="sectionCounter = 2">Transport</button>
+			<button class="navbutton" v-on:click="sectionCounter = 3">Stuff</button>
+			<button class="navbutton" v-on:click="sectionCounter = 4">Home</button>
+			<button class="navbutton" v-on:click="sectionCounter = 5">Results</button>
 		</div>
 		<br>
 		<diet-section
@@ -61,7 +61,7 @@
 		></result-section>
 		<br>
 		<button
-		class="button"
+		class="buttonBackToStart"
 			v-if="sectionCounter === 5"
 			v-on:click="sectionCounter = 0"
 		>Back to Start</button>
@@ -100,6 +100,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 #app {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -109,141 +111,168 @@ export default {
 	margin-top: 60px;
 }
 
-/* .breadcrumbs {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  flex: 2;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap;
-  background-color: #4FD1C5;;
+
+
+
+
+
+
+
+
+
+.breadcrumbs {
+	content: '';
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	/* flex: 2; */
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-wrap: wrap;
+	top: calc(-1 * var(--borderWidth));
+	left: calc(-1 * var(--borderWidth));
+	height: calc(100% + var(--borderWidth) * 2);
+	width: calc(100% + var(--borderWidth) * 2);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	} 
+	@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
-.button {
-  min-width: 50px;
-  min-height: 10px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-  color: #313133;
-  background: #4FD1C5;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
-  position: relative;
-  padding: 10px;
-  }
 
-button::before {
-content: '';
-  border-radius: 1000px;
-  min-width: calc(300px + 12px);
-  min-height: calc(60px + 12px);
-  border: 6px solid #00FFCB;
-  box-shadow: 0 0 60px rgba(0,255,203,.64);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: all .3s ease-in-out 0s;
+
+
+
+
+
+
+
+
+.navbutton {
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 20px;
+	letter-spacing: 4px;
+	position: relative;
+	/* background-color: rgb(122, 194, 50); */
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border: none;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	width: 200px;
+	text-align: center;
+	transition-duration: 0.4s;
+	overflow: hidden;
+	box-shadow: 0 5px 15px #8bafd2;
+	border-radius: 4px;
+	width:auto;
+	background:transparent;
 }
-
-.button:hover, .button:focus {
-  color: #313133;
-  transform: translateY(-6px);
+.navbutton:hover {
+	background: linear-gradient(120deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	box-shadow: 0px 2px 10px 5px rgb(255, 255, 255);
+	outline:0; 
 }
-
-button:hover::before, button:focus::before {
-  opacity: 1;
+.navbutton:after {
+	content: "";
+	background:#00ffaa;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
 }
-
-button::after {
-  content: '';
-  width: 30px; height: 30px;
-  border-radius: 100%;
-  border: 6px solid #00FFCB;
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: ring 3s infinite;
+.navbutton:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s;
 }
+.navbutton:focus { 
+	background: linear-gradient(120deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	box-shadow: 0px 2px 10px 5px rgb(255, 255, 255);
+	outline:0; 
+	}
 
-button:hover::after, button:focus::after {
-  animation: none;
-  display: none;
+
+
+
+
+
+
+
+
+
+.buttonBackToStart {
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 20px;
+	letter-spacing: 4px;
+	position: relative;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border: none;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	width: 200px;
+	text-align: center;
+	transition-duration: 0.4s;
+	overflow: hidden;
+	box-shadow: 0 5px 15px #8bafd2;
+	border-radius: 4px;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
 }
-
-@keyframes ring {
+@keyframes animatedgradient {
   0% {
-    width: 30px;
-    height: 30px;
-    opacity: 1;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
+    background-position: 0% 50%;
   }
-
-
-} */
-
-/* button {
-	background: white;
-    padding: 10px;
-    margin: 10px;
-	width: 200px;
-    border: 1px dotted linear-gradient(21deg, chartreuse black);
-    padding-bottom: 20px;
-    box-shadow: -1px -1px 4px rgba(0,0,0,0.2);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-} */
-
-button {
-text-align: center;
-text-transform: uppercase;
-cursor: pointer;
-font-size: 20px;
-letter-spacing: 4px;
-position: relative;
-background-color: rgb(122, 194, 50);
-border: none;
-color: #fff;
-padding: 20px;
-margin: 5px;
-width: 200px;
-text-align: center;
-transition-duration: 0.4s;
-overflow: hidden;
-box-shadow: 0 5px 15px #8bafd2;
-border-radius: 4px;
+}
+.buttonBackToStart:hover {
+	background: linear-gradient(120deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	box-shadow: 0px 2px 10px 5px rgb(255, 255, 255);
+	outline:0; 
 }
 
-button:hover {
-	background: #fff;
-	box-shadow: 0px 2px 10px 5px chartreuse;
-	color: #000;
-}
-
-button:after {
+.buttonBackToStart:after {
 	content: "";
-	background:chartreuse;
+	background:#ffffff;
 	display: block;
 	position: absolute;
 	padding-top: 300%;
@@ -254,12 +283,83 @@ button:after {
 	transition: all 0.8s
 }
 
-button:active:after {
+.buttonBackToStart:active:after {
 	padding: 0;
 	margin: 0;
 	opacity: 1;
 	transition: 0s
 }
+.buttonBackToStart:focus { outline:0; }
 
-button:focus { outline:0; }
+
+
+
+
+
+
+
+
+
+.startbutton {
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 20px;
+	letter-spacing: 4px;
+	position: relative;
+	/* background-color: rgb(122, 194, 50); */
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border: none;
+	color: #fff;
+	padding: 20px;
+	margin: 5px;
+	width: 200px;
+	text-align: center;
+	transition-duration: 0.4s;
+	overflow: hidden;
+	box-shadow: 0 5px 15px #8bafd2;
+	border-radius: 4px;
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	}
+	@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.startbutton:hover {
+	background: linear-gradient(120deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	animation: animatedgradient 6s ease alternate infinite;
+	background-size: 300% 300%;
+	box-shadow: 0px 2px 10px 5px rgb(255, 255, 255);
+	outline:0; 
+}
+.startbutton:after {
+	content: "";
+	background:#ffffff;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+.startbutton:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+.startbutton:focus { outline:0; }
+
+
 </style>

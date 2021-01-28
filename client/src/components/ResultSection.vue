@@ -11,7 +11,7 @@
 			class="chart"
 			width="1000" -->
 		<apexchart id="donutchart"
-			width="500"
+			width="800"
 			type="donut"
 			v-bind:options="this.chartOptions"
 			v-bind:series="this.series"
