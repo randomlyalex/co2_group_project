@@ -16,20 +16,66 @@ db.questions.insertMany(
                 },
                 {
                     "text": "Yes, but it was second hand",
-                    "co2amount": 1
+                    "co2amount": 0.01
                 },
                 {
                     "text": "No, my old one is doing just fine!",
-                    "co2amount": 1
-                },
-                {
-                    "text": "Answer 4",
-                    "co2amount": 1
-                },
-                {
-                    "text": "Answer 5",
-                    "co2amount": 2
+                    "co2amount": 0
                 }
+            ]
+        },
+        {
+            "section_id": 3,
+            "type": "checkbox",
+            "questionHeading": "What appliances do you use on average?",
+            "questionSubHeading": "",
+            "answers": [
+                {
+                    "text": "Microwave Oven",
+                    "co2amount": 0.04
+                },
+                {
+                    "text": "Electric Tumble Dryer",
+                    "co2amount": 0.15
+                },
+                {
+                    "text": "Gas Hob most days",
+                    "co2amount": 0.07
+                },
+                {
+                    "text": "Gas oven occasionally",
+                    "co2amount": 0.038
+                },
+                {
+                    "text": "Electric hob most days",
+                    "co2amount": 0.13
+                },
+                {
+                    "text": "Electric oven occasionally",
+                    "co2amount": 0.091
+                },
+                {
+                    "text": "Dishwasher (once every 3 days)",
+                    "co2amount": 0.51
+                },
+                {
+                    "text": "Dishwasher (every day)",
+                    "co2amount": 1.2
+                },
+                {
+                    "text": "Fridge - Freezer A+",
+                    "co2amount": 0.116
+                },
+                {
+                    "text": "TV 34-37 inches",
+                    "co2amount": 0.2
+                },
+                {
+                    "text": "TV 37-80 inches",
+                    "co2amount": 0.35
+                }
+                 
+
             ]
         },
         {
@@ -48,8 +94,9 @@ db.questions.insertMany(
                 },
                 {
                     "text": "Car",
-                    "co2amount": 1
+                    "co2amount": 1.5
                 }
+
             ]
         },
         {
@@ -60,103 +107,79 @@ db.questions.insertMany(
             "answers": [
                 {
                     "text": "A little",
-                    "co2amount": 10
+                    "co2amount": 0.01
                 },
                 {
                     "text": "A little More",
-                    "co2amount": 12
+                    "co2amount": 0.03
                 },
                 {
                     "text": "More Again",
-                    "co2amount": 15
+                    "co2amount": 0.04
                 },
                 {
                     "text": "Loads",
-                    "co2amount": 20
+                    "co2amount": 0.05
                 },
                 {
                     "text": "Too Much!",
-                    "co2amount": 22
-                },
-                {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
+                    "co2amount": 0.1
                 }
             ]
         },
         {
             "section_id": 3,
-            "type": "range",
+            "type": "radio",
             "questionHeading": "How often do you get a new mobile phone?",
-            "questionSubHeading": "",
+            "questionSubHeading": "it might be 'free' but its not free to make",
             "answers": [
                 {
-                    "text": "A little",
-                    "co2amount": 10
+                    "text": "I get more than two a year",
+                    "co2amount": 0.25
                 },
                 {
-                    "text": "A little More",
-                    "co2amount": 12
+                    "text": "Annual",
+                    "co2amount": 0.1
                 },
                 {
-                    "text": "More Again",
-                    "co2amount": 15
+                    "text": "Every two years",
+                    "co2amount": 0.005
                 },
                 {
-                    "text": "Loads",
-                    "co2amount": 20
-                },
-                {
-                    "text": "Too Much!",
-                    "co2amount": 22
-                },
-                {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
+                    "text": "Never i'm still using an old Nokia",
+                    "co2amount": 0
                 }
             ]
         },
         {
             "section_id": 3,
-            "type": "range",
-            "questionHeading": "What's your online video habbit like?",
+            "type": "radio",
+            "questionHeading": "What's your online video habit like?",
             "questionSubHeading": "Are you still watching?",
             "answers": [
                 {
-                    "text": "A little",
-                    "co2amount": 10
+                    "text": "Whats the internet? (Liar you're on it now)",
+                    "co2amount": 0
                 },
                 {
-                    "text": "A little More",
-                    "co2amount": 12
+                    "text": "An hour a week",
+                    "co2amount": 0.001
                 },
                 {
-                    "text": "More Again",
-                    "co2amount": 15
+                    "text": "A few hours a week",
+                    "co2amount": 0.01
                 },
                 {
-                    "text": "Loads",
-                    "co2amount": 20
+                    "text": "Everyday",
+                    "co2amount": 0.09
                 },
                 {
-                    "text": "Too Much!",
-                    "co2amount": 22
+                    "text": "Mostly the weekend",
+                    "co2amount": 0.07
                 },
                 {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
+                    "text": "Its always on as background noise",
+                    "co2amount": 1.5
                 }
             ]
         },
@@ -167,32 +190,16 @@ db.questions.insertMany(
             "questionSubHeading": "Assuming we aren't in the middle of a global pandemic",
             "answers": [
                 {
-                    "text": "A little",
-                    "co2amount": 10
+                    "text": "All online baby",
+                    "co2amount": 0.5
                 },
                 {
-                    "text": "A little More",
-                    "co2amount": 12
+                    "text": "I struggled to use this website, i'd rather it was printed out",
+                    "co2amount": 2
                 },
                 {
-                    "text": "More Again",
-                    "co2amount": 15
-                },
-                {
-                    "text": "Loads",
-                    "co2amount": 20
-                },
-                {
-                    "text": "Too Much!",
-                    "co2amount": 22
-                },
-                {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
+                    "text": "Half and Half",
+                    "co2amount": 0.75
                 }
             ]
         },
@@ -203,69 +210,53 @@ db.questions.insertMany(
             "questionSubHeading": "Macklemore made thifting cool again",
             "answers": [
                 {
-                    "text": "A little",
-                    "co2amount": 10
+                    "text": "zero, I either wear nothing, or its all second hand",
+                    "co2amount": 0
                 },
                 {
-                    "text": "A little More",
-                    "co2amount": 12
+                    "text": "<£10 a week",
+                    "co2amount": 0.1
                 },
                 {
-                    "text": "More Again",
-                    "co2amount": 15
+                    "text": "£10 - £50",
+                    "co2amount": 0.5
                 },
                 {
-                    "text": "Loads",
-                    "co2amount": 20
+                    "text": "350 - £100",
+                    "co2amount": 1
                 },
                 {
-                    "text": "Too Much!",
-                    "co2amount": 22
+                    "text": "£100 - £500",
+                    "co2amount": 2
                 },
                 {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
+                    "text": "I might as well be Beyonce",
+                    "co2amount": 5
                 }
             ]
         },
         {
             "section_id": 3,
-            "type": "range",
+            "type": "checkbox",
             "questionHeading": "Do you have any pets?",
             "questionSubHeading": "",
             "answers": [
                 {
-                    "text": "A little",
+                    "text": "A small dog or similar",
+                    "co2amount": 0.5
+                },
+                {
+                    "text": "A large dog or similar",
+                    "co2amount": 2
+                },
+                {
+                    "text": "a cat or two",
+                    "co2amount": 1
+                },
+                {
+                    "text": "We basically live on a farm",
                     "co2amount": 10
                 },
-                {
-                    "text": "A little More",
-                    "co2amount": 12
-                },
-                {
-                    "text": "More Again",
-                    "co2amount": 15
-                },
-                {
-                    "text": "Loads",
-                    "co2amount": 20
-                },
-                {
-                    "text": "Too Much!",
-                    "co2amount": 22
-                },
-                {
-                    "text": "Even Mooooore!",
-                    "co2amount": 52
-                },
-                {
-                    "text": "Astronomical",
-                    "co2amount": 222
-                }
             ]
         },
         {
@@ -276,15 +267,15 @@ db.questions.insertMany(
             "answers": [
                 {
                     "text": "A little",
-                    "co2amount": 10
+                    "co2amount": 0.001
                 },
                 {
                     "text": "A little More",
-                    "co2amount": 12
+                    "co2amount": 0.05
                 },
                 {
-                    "text": "More Again",
-                    "co2amount": 15
+                    "text": "Admittedly quite a bit!",
+                    "co2amount": 0.2
                 },
                 {
                     "text": "Loads",
@@ -299,7 +290,7 @@ db.questions.insertMany(
                     "co2amount": 52
                 },
                 {
-                    "text": "Astronomical",
+                    "text": "I'm basically Beyonce",
                     "co2amount": 222
                 }
             ]
