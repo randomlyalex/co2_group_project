@@ -10,7 +10,7 @@ TBC to deploy
 
 #### Front-end
 
-- []Vue 2]([Introduction — Vue.js](https://vuejs.org/v2/guide/)) - Frontend framework
+- [Vue 2]([Introduction — Vue.js](https://vuejs.org/v2/guide/)) - Frontend framework
 - CSS3
 
 #### Back-end
@@ -33,23 +33,19 @@ TBC to deploy
 
 ## Screenshots
 
-#### Desktop/Tablet
+#### Animated
 
-![Desktop-1](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/desktop-1.jpg)
-![Desktop-2](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/desktop-2.jpg)
-![Desktop-3](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/desktop-3.jpg)
-![Desktop-4](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/desktop-4.jpg)
-![Desktop-5](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/desktop-5.jpg)
+![Main use](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/C6gT4KWxaT.gif)
+![Admin CRUD](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/azWhQW3e5n.gif)
 
-#### Mobile
-
-![Mobile-1](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/mobile-1.jpg)
-![Mobile-2](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/mobile-2.jpg)
-![Mobile-3](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/mobile-3.jpg)
-![Mobile-4](https://github.com/amand33p/bug-tracker-pern-ts/blob/master/screenshots/mobile-4.jpg)
-
-## Usage
-
+## Static
+![Landing page](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.38.19.png)
+![Use-1](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.41.07.png)
+![Use-2](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.41.29.png)
+![Results](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.40.45.png)
+![Admin](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.40.45.png)
+![Admin-Add-Q-Expand](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.52.38.png)
+![Admin-Edit-Q-Expand](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.52.48.png)
 
 
 #### Client:
