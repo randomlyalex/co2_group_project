@@ -1,4 +1,11 @@
-## Co2 Tracker Quiz | MERN
+Original Brief given [here](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/Brief.md).
+
+[Link to figma wireframe and planning](https://www.figma.com/file/SSh2amghDzQQkE3YqR5jfC/co2-App-Wireframe-Ideas)
+
+[Quick Pres on the project](https://docs.google.com/presentation/d/1VLA1GCaFe0NQbKRGdS-ULtAjgAIfZ5-fUyWN6vi9MDk/edit?usp=sharing)
+
+
+## Co2 Tracker Quiz | MEVN
 
 A quiz designed to help users make better lifestyle choices with the co2 emissions, built over 4 days with the MERN stack, some minimal styling and a proof of concept admin tab to CRUD and show backend & db use.
 
