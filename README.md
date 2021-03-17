@@ -34,10 +34,12 @@ TBC to deploy
 ## Screenshots
 
 #### Animated
-Main Use:
+####Main Use: 
+
 ![Main use](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/C6gT4KWxaT.gif)
 
 Admin CRUD:
+
 ![Admin CRUD](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/azWhQW3e5n.gif)
 
 ## Static
