@@ -34,7 +34,7 @@ TBC to deploy
 ## Screenshots
 
 #### Animated
-####Main Use: 
+Main Use: 
 
 ![Main use](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/C6gT4KWxaT.gif)
 
@@ -44,24 +44,30 @@ Admin CRUD:
 
 ## Static
 Landing Page:
+
 ![Landing page](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.38.19.png)
 
 Use-1:
+
 ![Use-1](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.41.07.png)
 
 Use-2:
+
 ![Use-2](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.41.29.png)
 
 Results:
 ![Results](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.40.45.png)
 
 Admin:
+
 ![Admin](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.52.28.png)
 
 Admin Add a question expand:
+
 ![Admin-Add-Q-Expand](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.52.38.png)
 
 Admin Edit a Question expand:
+
 ![Admin-Edit-Q-Expand](https://github.com/randomlyalex-codeclan/co2_group_project/blob/main/screenshots/Screenshot%202021-03-17%20at%2014.52.48.png)
 
 
