@@ -24,7 +24,7 @@ TBC to deploy
 
 - [Node.js](https://nodejs.org/en/) - Runtime environment for JS
 - [Express.js](https://expressjs.com/) - Node.js framework, makes process of building APIs easier & faster
-- [MongoDB](https://www.mongodb.com/) - Opens-source SQL database to store data
+- [MongoDB](https://www.mongodb.com/) - Opens-source noSQL document/json database to store data
   
   
 
