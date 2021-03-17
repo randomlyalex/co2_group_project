@@ -10,7 +10,7 @@ TBC to deploy
 
 #### Front-end
 
-- [Vue 2]([Introduction — Vue.js](https://vuejs.org/v2/guide/)) - Frontend framework
+- [Vue 2](https://vuejs.org/v2/guide/) - Frontend framework
 - CSS3
 
 #### Back-end
